@@ -27,7 +27,7 @@ Microservice for sending error notification to Discord.
    Then, edit `.dev.vars` file and fill the variables with your own values.
 
    > [!TIP]
-   > You can create secret value for `TOKEN_SECRET` with the following command:
+   > You can create random value for `TOKEN_SECRET` with the following command:
    >
    > ```shell
    > openssl rand -base64 32
@@ -39,8 +39,7 @@ Microservice for sending error notification to Discord.
    pnpm run dev
    ```
 
-   The service will be running on port 8080.  
-   You can check sended mails at http://localhost:8005. (powered by aws-ses-v2-local)
+   The service will be running on port 8080.
 
 ### Testing
 
