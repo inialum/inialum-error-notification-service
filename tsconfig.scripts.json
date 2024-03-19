@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "@Root/*": ["./*"]
+    }
+  },
+  "include": ["./scripts/*.ts"],
+  "exclude": ["node_modules"]
+}

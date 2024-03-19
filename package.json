@@ -1,0 +1,43 @@
+{
+  "name": "inialum-error-notification-service",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "create-token": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/createToken.ts",
+    "lint": "pnpm run lint:check && pnpm run format:check",
+    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
+    "format": "pnpm run format:write",
+    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "test": "vitest",
+    "test:ci": "pnpm run test:coverage",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^0.9.8",
+    "hono": "^4.1.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "@inialum/eslint-config": "^1.1.1",
+    "@types/jws": "^3.2.9",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "@vitest/coverage-v8": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jws": "^4.0.0",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0",
+    "vitest-environment-miniflare": "^2.14.2",
+    "wrangler": "^3.32.0"
+  }
+}

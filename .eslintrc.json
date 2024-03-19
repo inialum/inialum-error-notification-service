@@ -1,0 +1,6 @@
+{
+  "extends": ["@inialum", "prettier"],
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./tsconfig.scripts.json"]
+  }
+}
