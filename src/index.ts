@@ -1,3 +1,4 @@
+import { swaggerUI } from '@hono/swagger-ui'
 import { OpenAPIHono } from '@hono/zod-openapi'
 import { env } from 'hono/adapter'
 import { cors } from 'hono/cors'
@@ -7,6 +8,8 @@ import { secureHeaders } from 'hono/secure-headers'
 import { API_ENDPOINT, ORIGINS } from '@/constants/config'
 
 import { api } from '@/routes/api'
+
+import { DisableTryItOutPlugin } from '@/utils/swaggerPlugins'
 
 const app = new OpenAPIHono()
 
@@ -27,6 +30,7 @@ app.use('/api/*', async (c, next) => {
 })
 
 app.route('/api', api)
+
 app.doc('/schema/v1', {
   openapi: '3.0.0',
   info: {
@@ -39,6 +43,15 @@ app.doc('/schema/v1', {
     },
   ],
 })
+
+app.get(
+  '/docs/v1',
+  swaggerUI({
+    url: '/schema/v1',
+    // @ts-expect-error - Disable type error to handle broken type
+    plugins: [DisableTryItOutPlugin],
+  }),
+)
 
 app.openAPIRegistry.registerComponent('securitySchemes', 'bearerAuth', {
   type: 'http',
