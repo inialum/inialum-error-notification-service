@@ -51,6 +51,10 @@ pnpm run test:coverage
 OpenAPI Specification (OAS) is a standard, language-agnostic interface to RESTful APIs. This service uses OAS to describe its API and it is powered by [Zod OpenAPI Hono
 ](https://github.com/honojs/middleware/tree/main/packages/zod-openapi). The service hosts the OAS file on `/schema/v1` endpoint.
 
+### Swagger UI
+
+You can access the Swagger UI by visiting https://error-notification-api.inialum.org/docs/v1 .
+
 ### Tips
 
 - If you want to generate authentication token to request API of this service, you can use this command
