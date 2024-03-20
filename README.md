@@ -40,7 +40,7 @@ For now, this service only supports sending Discord message via Webhook.
    pnpm run dev
    ```
 
-   The service will be running on port 8080.
+   The service will be running on port 7070.
 
 ### Testing
 
