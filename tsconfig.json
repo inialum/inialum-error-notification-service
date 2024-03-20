@@ -7,11 +7,7 @@
     "strict": true,
     "skipLibCheck": true,
     "lib": ["esnext"],
-    "types": [
-      "@cloudflare/workers-types",
-      "vitest/globals",
-      "vitest-environment-miniflare/globals"
-    ],
+    "types": ["vitest/globals", "vitest-environment-miniflare/globals"],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "baseUrl": ".",
