@@ -2,10 +2,11 @@
   "compilerOptions": {
     "target": "es2022",
     "moduleResolution": "node",
+    "noEmit": true,
     "esModuleInterop": true,
     "strict": true,
+    "skipLibCheck": true,
     "lib": ["esnext"],
-    "noEmit": true,
     "types": [
       "@cloudflare/workers-types",
       "vitest/globals",
