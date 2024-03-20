@@ -11,3 +11,7 @@ updates:
           - "@typescript-eslint/*"
           - "eslint*"
           - "prettier"
+      test:
+        patterns:
+          - "@vitest/*"
+          - "vitest*"
