@@ -1,6 +1,7 @@
 # inialum-error-notification-service
 
-Microservice for sending error notification to Discord.
+Microservice for sending error notification.  
+For now, this service only supports sending Discord message via Webhook.
 
 ## Development
 
@@ -70,8 +71,7 @@ The generated token uses `TOKEN_SECRET` (defined in `.dev.vars`) as the secret.
 
 ## Deployment
 
-This service is deployed to [Cloudflare Workers](https://workers.cloudflare.com) using GitHub Actions. When a new commit is pushed to `main` branch, the service will be automatically deployed.  
-If you want to deploy to the staging environment, push the commit to `staging` branch. (`@inialum/inialum-dev` will handle this)
+This service is deployed to [Cloudflare Workers](https://workers.cloudflare.com) using GitHub Actions. When a new commit is pushed to `main` branch, the service will be automatically deployed.
 
 ## License
 
