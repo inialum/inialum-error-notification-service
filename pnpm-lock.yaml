@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@hono/swagger-ui':
+    specifier: ^0.2.1
+    version: 0.2.1(hono@4.1.2)
   '@hono/zod-openapi':
     specifier: ^0.9.8
     version: 0.9.8(hono@4.1.2)(zod@3.22.4)
@@ -649,6 +652,14 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
     dev: true
+
+  /@hono/swagger-ui@0.2.1(hono@4.1.2):
+    resolution: {integrity: sha512-wBxVMRe3/v8xH4o6icmwztiIq0DG0s7+jHVMHVUAoFFCWEQNL2iskMmQtrhSDtsFmBZUeUFQUaaJ6Ir6DOmHLA==}
+    peerDependencies:
+      hono: '*'
+    dependencies:
+      hono: 4.1.2
+    dev: false
 
   /@hono/zod-openapi@0.9.8(hono@4.1.2)(zod@3.22.4):
     resolution: {integrity: sha512-NS6lvQEGnsjyQkp+aQjMARREz3WGf19y0+RiiJMVrihWlmKbGaJkPuOWpfFQG6FU9q+FVUyUCryXK+3J07GPAw==}

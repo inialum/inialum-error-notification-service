@@ -18,6 +18,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@hono/swagger-ui": "^0.2.1",
     "@hono/zod-openapi": "^0.9.8",
     "hono": "^4.1.2",
     "zod": "^3.22.4"
