@@ -4,7 +4,7 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
+    "dev": "wrangler dev src/index.ts --port 7070",
     "deploy": "wrangler deploy --minify src/index.ts --keep-vars",
     "create-token": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/createToken.ts",
     "lint": "pnpm run lint:check && pnpm run format:check",
@@ -29,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
     "@vitest/coverage-v8": "^1.4.0",
+    "discord-api-types": "^0.37.75",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
