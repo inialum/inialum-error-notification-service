@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "strict": true,
     "lib": ["esnext"],
+    "noEmit": true,
     "types": [
       "@cloudflare/workers-types",
       "vitest/globals",
