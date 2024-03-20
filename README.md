@@ -53,7 +53,7 @@ OpenAPI Specification (OAS) is a standard, language-agnostic interface to RESTfu
 
 ### Swagger UI
 
-You can access the Swagger UI by visiting https://error-notification-api.inialum.org/docs/v1 .
+You can access the Swagger UI by visiting [here](https://error-notification-api.inialum.org/docs/v1).
 
 ### Tips
 
