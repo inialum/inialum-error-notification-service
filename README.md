@@ -1,6 +1,6 @@
 # inialum-error-notification-service
 
-Microservice for sending error notification.
+Microservice for sending error notification
 
 ## Development
 
@@ -25,13 +25,6 @@ Microservice for sending error notification.
    ```
 
    Then, edit `.dev.vars` file and fill the variables with your own values.
-
-   > [!TIP]
-   > You can create random value for `TOKEN_SECRET` with the following command:
-   >
-   > ```shell
-   > openssl rand -base64 32
-   > ```
 
 4. Run the service
 
@@ -60,13 +53,19 @@ OpenAPI Specification (OAS) is a standard, language-agnostic interface to RESTfu
 
 ### Tips
 
-If you want to generate authentication token to request API of this service, you can use this command
+- If you want to generate authentication token to request API of this service, you can use this command
 
-```shell
-pnpm run create-token
-```
+  ```shell
+  pnpm run create-token
+  ```
 
-The generated token uses `TOKEN_SECRET` (defined in `.dev.vars`) as the secret.
+  The generated token uses `TOKEN_SECRET` (defined in `.dev.vars`) as the secret.
+
+- You can create random secret value for `TOKEN_SECRET` with the following command
+
+  ```shell
+  openssl rand -base64 32
+  ```
 
 ## Deployment
 
