@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^1.4.0
     version: 1.4.0(vitest@1.4.0)
   discord-api-types:
-    specifier: ^0.37.75
-    version: 0.37.75
+    specifier: ^0.37.77
+    version: 0.37.77
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
@@ -1710,8 +1710,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.75:
-    resolution: {integrity: sha512-pnb2iPp63+TqSs+3MCzl47y0CFQYjDDQBmuiCs0LkLoRdFx2dDpjrzJYC7BcHJCa/Xlpf+/JuDT/YADvQLu3yQ==}
+  /discord-api-types@0.37.77:
+    resolution: {integrity: sha512-AkEn9nZA5w/XJ8wzKzlpx3X+MToQCowKahftF1+KYnMWnuglCrVRojy1XlIWX8Frgp1v8INceGKpvDkbvMLJ4g==}
     dev: true
 
   /doctrine@2.1.0:
