@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@hono/swagger-ui':
     specifier: ^0.2.1
-    version: 0.2.1(hono@4.2.0)
+    version: 0.2.1(hono@4.1.2)
   '@hono/zod-openapi':
     specifier: ^0.9.8
-    version: 0.9.8(hono@4.2.0)(zod@3.22.4)
+    version: 0.9.8(hono@4.1.2)(zod@3.22.4)
   hono:
-    specifier: ^4.2.0
-    version: 4.2.0
+    specifier: ^4.1.2
+    version: 4.1.2
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -653,15 +653,15 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@hono/swagger-ui@0.2.1(hono@4.2.0):
+  /@hono/swagger-ui@0.2.1(hono@4.1.2):
     resolution: {integrity: sha512-wBxVMRe3/v8xH4o6icmwztiIq0DG0s7+jHVMHVUAoFFCWEQNL2iskMmQtrhSDtsFmBZUeUFQUaaJ6Ir6DOmHLA==}
     peerDependencies:
       hono: '*'
     dependencies:
-      hono: 4.2.0
+      hono: 4.1.2
     dev: false
 
-  /@hono/zod-openapi@0.9.8(hono@4.2.0)(zod@3.22.4):
+  /@hono/zod-openapi@0.9.8(hono@4.1.2)(zod@3.22.4):
     resolution: {integrity: sha512-NS6lvQEGnsjyQkp+aQjMARREz3WGf19y0+RiiJMVrihWlmKbGaJkPuOWpfFQG6FU9q+FVUyUCryXK+3J07GPAw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -669,18 +669,18 @@ packages:
       zod: 3.*
     dependencies:
       '@asteasolutions/zod-to-openapi': 5.5.0(zod@3.22.4)
-      '@hono/zod-validator': 0.1.11(hono@4.2.0)(zod@3.22.4)
-      hono: 4.2.0
+      '@hono/zod-validator': 0.1.11(hono@4.1.2)(zod@3.22.4)
+      hono: 4.1.2
       zod: 3.22.4
     dev: false
 
-  /@hono/zod-validator@0.1.11(hono@4.2.0)(zod@3.22.4):
+  /@hono/zod-validator@0.1.11(hono@4.1.2)(zod@3.22.4):
     resolution: {integrity: sha512-PQXeHUP0+36qpRt8yfeD7N2jbK3ETlGvSN6dMof/HwUC/APRokQRjpXZm4rrlG71Ft0aWE01+Bm4XejqPie5Uw==}
     peerDependencies:
       hono: '>=3.9.0'
       zod: ^3.19.1
     dependencies:
-      hono: 4.2.0
+      hono: 4.1.2
       zod: 3.22.4
     dev: false
 
@@ -2407,8 +2407,8 @@ packages:
       function-bind: 1.1.2
     dev: true
 
-  /hono@4.2.0:
-    resolution: {integrity: sha512-4A9WSwQW1V1Bby07Ida1FZwvYceSkByd8uoxvcmYSPaEWIZqutn/s5jE3CJOci8Jt//vb9VDn+5B3xobIzvA6A==}
+  /hono@4.1.2:
+    resolution: {integrity: sha512-pbfllzxpZifsp8gbjB01wetLk6Lc4p0OkJmtbH92CYFMPAdL6dzS2tHldfPjnNP87mNJS717P72lt6jzZSqg/g==}
     engines: {node: '>=16.0.0'}
     dev: false
 
