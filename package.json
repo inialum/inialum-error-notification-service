@@ -24,7 +24,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240314.0",
+    "@cloudflare/workers-types": "^4.20240329.0",
     "@inialum/eslint-config": "^1.1.2",
     "@types/jws": "^3.2.9",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
