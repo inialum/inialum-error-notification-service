@@ -43,7 +43,7 @@ jobs:
           env: Production
 
       - name: Deploy to Cloudflare Workers
-        run: pnpm run deploy > /dev/null
+        run: pnpm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           IS_PRODUCTION_DEPLOY: true
