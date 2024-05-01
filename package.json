@@ -40,6 +40,6 @@
     "typescript": "^5.4.3",
     "vitest": "^1.4.0",
     "vitest-environment-miniflare": "^2.14.2",
-    "wrangler": "^3.36.0"
+    "wrangler": "^3.45.0"
   }
 }
