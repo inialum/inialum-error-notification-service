@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^1.1.2
     version: 1.1.2(@typescript-eslint/eslint-plugin@7.5.0)(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)
   '@types/jws':
-    specifier: ^3.2.9
-    version: 3.2.9
+    specifier: ^3.2.10
+    version: 3.2.10
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.5.0
     version: 7.5.0(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)(typescript@5.4.3)
@@ -1302,8 +1302,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/jws@3.2.9:
-    resolution: {integrity: sha512-xAqC7PI7QSBY3fXV1f2pbcdbBFoR4dF8+lH2z6MfZQVcGe14twYVfjzJ3CHhLS1NHxE+DnjUR5xaHu2/U9GGaQ==}
+  /@types/jws@3.2.10:
+    resolution: {integrity: sha512-cOevhttJmssERB88/+XvZXvsq5m9JLKZNUiGfgjUb5lcPRdV2ZQciU6dU76D/qXXFYpSqkP3PrSg4hMTiafTZw==}
     dependencies:
       '@types/node': 20.11.30
     dev: true
