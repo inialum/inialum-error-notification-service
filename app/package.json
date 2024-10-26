@@ -1,0 +1,32 @@
+{
+	"name": "app",
+	"type": "module",
+	"private": true,
+	"license": "Apache-2.0",
+	"scripts": {
+		"dev": "wrangler dev src/index.ts --port 7070",
+		"deploy": "wrangler deploy --minify src/index.ts --keep-vars",
+		"create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"test": "vitest",
+		"test:ci": "pnpm run test:coverage",
+		"test:coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@hono/swagger-ui": "^0.2.1",
+		"@hono/zod-openapi": "^0.9.10",
+		"hono": "^4.2.1",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20241022.0",
+		"@inialum/token-generator": "^0.2.0",
+		"@vitest/coverage-v8": "^1.4.0",
+		"discord-api-types": "^0.37.78",
+		"typescript": "^5.4.3",
+		"vitest": "^1.4.0",
+		"vitest-environment-miniflare": "^2.14.2",
+		"wrangler": "^3.83.0"
+	}
+}
