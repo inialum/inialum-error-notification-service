@@ -1,5 +1,5 @@
 {
-	"name": "@inialum/inialum-error-notification-service-monorepo",
+	"name": "monorepo",
 	"type": "module",
 	"private": true,
 	"license": "Apache-2.0",
