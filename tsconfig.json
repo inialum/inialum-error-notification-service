@@ -17,5 +17,5 @@
     }
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules", "scripts"]
+  "exclude": ["node_modules"]
 }
