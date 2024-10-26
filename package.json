@@ -9,6 +9,7 @@
 	"scripts": {
 		"lint": "biome check",
 		"lint:fix": "biome check --write",
+		"test:ci": "pnpm --filter \"./app\" test:ci",
 		"app": "pnpm --filter \"./app\"",
 		"sdk": "pnpm --filter \"./packages/sdk\""
 	},
