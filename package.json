@@ -1,42 +1,33 @@
 {
-  "name": "inialum-error-notification-service",
-  "type": "module",
-  "private": true,
-  "license": "Apache-2.0",
-  "scripts": {
-    "dev": "wrangler dev src/index.ts --port 7070",
-    "deploy": "wrangler deploy --minify src/index.ts --keep-vars",
-    "create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
-    "lint": "pnpm run lint:check && pnpm run format:check",
-    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
-    "format": "pnpm run format:write",
-    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "test": "vitest",
-    "test:ci": "pnpm run test:coverage",
-    "test:coverage": "vitest run --coverage"
-  },
-  "dependencies": {
-    "@hono/swagger-ui": "^0.2.1",
-    "@hono/zod-openapi": "^0.9.10",
-    "hono": "^4.2.1",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240329.0",
-    "@inialum/eslint-config": "^1.1.2",
-    "@inialum/token-generator": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
-    "@vitest/coverage-v8": "^1.4.0",
-    "discord-api-types": "^0.37.78",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3",
-    "vitest": "^1.4.0",
-    "vitest-environment-miniflare": "^2.14.2",
-    "wrangler": "^3.36.0"
-  }
+	"name": "inialum-error-notification-service",
+	"type": "module",
+	"private": true,
+	"license": "Apache-2.0",
+	"scripts": {
+		"dev": "wrangler dev src/index.ts --port 7070",
+		"deploy": "wrangler deploy --minify src/index.ts --keep-vars",
+		"create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"test": "vitest",
+		"test:ci": "pnpm run test:coverage",
+		"test:coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@hono/swagger-ui": "^0.2.1",
+		"@hono/zod-openapi": "^0.9.10",
+		"hono": "^4.2.1",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@cloudflare/workers-types": "^4.20241022.0",
+		"@inialum/token-generator": "^0.2.0",
+		"@vitest/coverage-v8": "^1.4.0",
+		"discord-api-types": "^0.37.78",
+		"typescript": "^5.4.3",
+		"vitest": "^1.4.0",
+		"vitest-environment-miniflare": "^2.14.2",
+		"wrangler": "^3.83.0"
+	}
 }

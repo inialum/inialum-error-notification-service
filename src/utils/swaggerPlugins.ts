@@ -3,14 +3,12 @@
  *
  * @see {@link https://github.com/swagger-api/swagger-ui/issues/3725#issuecomment-334899276}
  */
-export const DisableTryItOutPlugin = function () {
-  return {
-    statePlugins: {
-      spec: {
-        wrapSelectors: {
-          allowTryItOutFor: () => () => false,
-        },
-      },
-    },
-  }
-}
+export const DisableTryItOutPlugin = () => ({
+	statePlugins: {
+		spec: {
+			wrapSelectors: {
+				allowTryItOutFor: () => () => false,
+			},
+		},
+	},
+})

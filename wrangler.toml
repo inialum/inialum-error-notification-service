@@ -1,4 +1,7 @@
 name = "inialum-error-notification-service"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-09-02"
 workers_dev = false
 vars = { ENVIRONMENT = "production" }
+
+[observability]
+enabled = true
