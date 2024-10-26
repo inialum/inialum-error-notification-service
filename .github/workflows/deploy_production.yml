@@ -21,6 +21,9 @@ jobs:
     permissions:
       contents: read
       deployments: write
+    defaults:
+      run:
+        working-directory: app
 
     steps:
       - name: Checkout
