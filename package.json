@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "wrangler dev src/index.ts --port 7070",
     "deploy": "wrangler deploy --minify src/index.ts --keep-vars",
-    "create-token": "inialum-token-generator --service-name inialum-mail-service --env-file ./.dev.vars",
+    "create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
     "lint": "pnpm run lint:check && pnpm run format:check",
     "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
