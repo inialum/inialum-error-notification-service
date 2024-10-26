@@ -1,9 +1,7 @@
 {
-  "recommendations": [
-    "streetsidesoftware.code-spell-checker",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "github.vscode-github-actions",
-    "biomejs.biome"
-  ]
+	"recommendations": [
+		"streetsidesoftware.code-spell-checker",
+		"github.vscode-github-actions",
+		"biomejs.biome"
+	]
 }
