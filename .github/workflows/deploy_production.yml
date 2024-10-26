@@ -1,20 +1,26 @@
 name: Deploy for production
 
 on:
-  workflow_run:
-    workflows: ['Test']
-    branches: [main]
-    types:
-      - completed
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
 
 jobs:
+  test_ci:
+    name: Run Test CI
+    uses: ./.github/workflows/test.yml
+
   deploy:
+    needs: test_ci
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    if: github.repository == 'inialum/inialum-error-notification-service'
     permissions:
       contents: read
       deployments: write
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout
