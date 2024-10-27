@@ -1,0 +1,42 @@
+{
+	"name": "@inialum/error-notification-service-javascript-sdk",
+	"version": "0.0.1",
+	"description": "JavaScript SDK for inialum-error-notification-service",
+	"private": true,
+	"type": "module",
+	"author": {
+		"name": "INIALUM - INIAD Alumni Meetings",
+		"email": "contact@inialum.org",
+		"url": "https://inialum.org"
+	},
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/inialum/inialum-error-notification-service"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"./dist/**/*.js",
+		"./dist/**/*.d.ts"
+	],
+	"scripts": {
+		"build": "tsup",
+		"api:gen-schema": "openapi-typescript https://error-notification-api.inialum.org/schema/v1 -o ./src/types/generated/schema.d.ts",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"openapi-fetch": "^0.13.0"
+	},
+	"devDependencies": {
+		"@tsconfig/recommended": "^1.0.8",
+		"@tsconfig/strictest": "^2.0.5",
+		"openapi-typescript": "^7.4.2",
+		"tsup": "^8.3.5",
+		"typescript": "^5.4.3",
+		"vitest": "^1.4.0"
+	}
+}
