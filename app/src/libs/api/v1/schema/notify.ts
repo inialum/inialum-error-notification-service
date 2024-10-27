@@ -63,28 +63,22 @@ export const NotifyApiResponseSchemaV1 = z
 /**
  * Schema for Zod validation error
  */
-const ZodValidationError = z.object({
-	code: z.string(),
-	expected: z.string(),
-	received: z.string(),
-	path: z.string().array(),
-	message: z.string(),
-})
+const ZodValidationError = z.any()
 
 /**
  * Schema for 400 error response of POST /notify
  */
 export const NotifyApi400ErrorSchemaV1 = z.object({
 	message: z.string().openapi({
-		example: 'Invalid request body',
+		example: 'Validation error',
 	}),
-	issues: ZodValidationError.array().openapi({
+	issues: ZodValidationError.openapi({
 		example: [
 			{
 				code: 'invalid_string',
 				expected: 'string',
 				received: 'undefined',
-				path: ['message'],
+				path: ['title'],
 				message: 'This field is required',
 			},
 		],
@@ -96,6 +90,6 @@ export const NotifyApi400ErrorSchemaV1 = z.object({
  */
 export const NotifyApi500ErrorSchemaV1 = z.object({
 	message: z.string().openapi({
-		example: 'Failed to notify error',
+		example: 'Internal server error',
 	}),
 })

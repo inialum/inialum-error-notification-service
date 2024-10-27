@@ -60,4 +60,23 @@ app.openAPIRegistry.registerComponent('securitySchemes', 'bearerAuth', {
 	description: 'JWT Authentication',
 })
 
+app.onError((error, c) => {
+	console.error(error)
+
+	if (error instanceof Error) {
+		return c.json(
+			{
+				message: error.message,
+			},
+			500,
+		)
+	}
+	return c.json(
+		{
+			message: 'Internal server error',
+		},
+		500,
+	)
+})
+
 export default app

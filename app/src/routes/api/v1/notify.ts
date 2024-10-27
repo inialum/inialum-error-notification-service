@@ -61,45 +61,31 @@ notifyApiV1.openapi(
 
 		const data = c.req.valid('json')
 
-		try {
-			const response = await fetch(DISCORD_WEBHOOK_URL, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: buildDiscordMessageBody(data),
-			})
-			if (response.ok) {
-				return c.json({
-					status: 'ok',
-				})
-			}
-			const error = await response.text()
-			throw new Error(error)
-		} catch (e) {
-			if (e instanceof Error) {
-				console.error(e)
+		const response = await fetch(DISCORD_WEBHOOK_URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: buildDiscordMessageBody(data),
+		})
 
-				return c.json(
-					{
-						message: e.message,
-					},
-					500,
-				)
-			}
+		if (response.ok) {
 			return c.json(
 				{
-					message: 'Internal Server Error',
+					status: 'ok',
 				},
-				500,
+				200,
 			)
 		}
+
+		const error = await response.text()
+		throw new Error(error)
 	},
 	(result, c) => {
 		if (!result.success) {
 			return c.json(
 				{
-					message: 'Invalid request body',
+					message: 'Validation Error',
 					issues: result.error.issues,
 				},
 				400,
