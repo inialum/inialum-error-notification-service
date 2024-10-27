@@ -100,7 +100,7 @@ export interface components {
             /** @example Error occurred in XXX function */
             description?: string;
             /** @example inialum-mail-service */
-            service_name: string
+            service_name: string;
             /** @example production */
             environment: "local" | "staging" | "production";
         };
