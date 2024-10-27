@@ -25,12 +25,9 @@ export const NotifyApiRequestSchemaV1 = z
 				example: 'Error occurred in XXX function',
 			}),
 		service_name: z
-			.union(
-				[z.literal('inialum-mail-service'), z.literal('inialum-entry-form')],
-				{
-					errorMap: () => ({ message: 'Invalid service name' }),
-				},
-			)
+			.string({
+				required_error: 'This field is required',
+			})
 			.openapi({
 				example: 'inialum-mail-service',
 			}),
