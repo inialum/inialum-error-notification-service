@@ -85,7 +85,7 @@ notifyApiV1.openapi(
 		if (!result.success) {
 			return c.json(
 				{
-					message: 'Validation Error',
+					message: 'Validation error',
 					issues: result.error.issues,
 				},
 				400,
