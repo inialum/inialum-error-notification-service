@@ -1,9 +1,17 @@
 {
 	"$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
-	"changelog": "@changesets/cli/changelog",
+	"changelog": [
+		"@changesets/changelog-github",
+		{ "repo": "inialum/inialum-error-notification-service" }
+	],
 	"commit": false,
 	"fixed": [],
-	"linked": [],
+	"linked": [
+		[
+			"@inialum/error-notification-service-javascript-sdk",
+			"@inialum/error-notification-service-hono-middleware"
+		]
+	],
 	"access": "restricted",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
