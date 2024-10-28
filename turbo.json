@@ -13,8 +13,8 @@
 			"persistent": true
 		},
 		"test:ci": {
-			"outputs": ["coverage/**"],
-			"dependsOn": []
+			"dependsOn": ["^build"],
+			"outputs": ["coverage/**"]
 		},
 		"clean": {
 			"cache": false
