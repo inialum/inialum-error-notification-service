@@ -14,10 +14,20 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-
+    env:
+      TURBO_CACHE_DIR: .turbo
+  
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup cache for Turborepo
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
