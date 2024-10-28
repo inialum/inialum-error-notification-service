@@ -22,7 +22,10 @@
 	"files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
 	"scripts": {
 		"build": "tsup",
-		"test": "vitest"
+		"test": "vitest",
+		"test:ci": "pnpm run test:coverage",
+		"test:coverage": "vitest run --coverage",
+		"typecheck": "tsc --noEmit"
 	},
 	"peerDependencies": {
 		"hono": ">=4.2.0"
@@ -33,9 +36,10 @@
 	"devDependencies": {
 		"@tsconfig/recommended": "^1.0.8",
 		"@tsconfig/strictest": "^2.0.5",
+		"@vitest/coverage-v8": "^2.1.4",
 		"hono": "^4.2.1",
 		"tsup": "^8.3.5",
 		"typescript": "^5.4.3",
-		"vitest": "^1.6.0"
+		"vitest": "^2.1.4"
 	}
 }
