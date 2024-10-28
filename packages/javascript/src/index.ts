@@ -9,6 +9,7 @@ const ERROR_NOTIFICATION_API_BASE_URL =
  * Notify an error via inialum-error-notification-service.
  */
 export const notifyError = async (
+	token: string,
 	{
 		title,
 		description,
@@ -20,7 +21,6 @@ export const notifyError = async (
 		serviceName: string
 		environment: EnvironmentType
 	},
-	token: string,
 ) => {
 	try {
 		const client = createClient<paths>({

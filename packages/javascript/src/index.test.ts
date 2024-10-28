@@ -19,9 +19,9 @@ describe('JavaScript SDK', () => {
 			description: 'Error occurred in XXX function',
 			serviceName: 'inialum-mail-service',
 			environment: 'production',
-		} satisfies Parameters<typeof notifyError>[0]
+		} satisfies Parameters<typeof notifyError>[1]
 
-		expect(notifyError(reqBody, 'my-token')).resolves.toStrictEqual({
+		expect(notifyError('my-token', reqBody)).resolves.toStrictEqual({
 			status: 'ok',
 		})
 	})
