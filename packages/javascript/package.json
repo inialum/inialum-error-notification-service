@@ -19,10 +19,7 @@
 	},
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"files": [
-		"./dist/**/*.js",
-		"./dist/**/*.d.ts"
-	],
+	"files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
 	"scripts": {
 		"build": "tsup",
 		"api:gen-schema": "openapi-typescript https://error-notification-api.inialum.org/schema/v1 -o ./src/types/generated/schema.d.ts",
