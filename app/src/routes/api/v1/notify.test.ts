@@ -62,7 +62,7 @@ describe('API v1', () => {
 
 		expect(res.status).toBe(400)
 		expect(await res.json()).toStrictEqual({
-			message: 'Invalid request body',
+			message: 'Validation error',
 			issues: [
 				{
 					code: 'invalid_union',
