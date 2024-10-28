@@ -180,3 +180,6 @@ dist
 dist
 .wrangler
 .dev.vars
+
+# Turbo
+.turbo

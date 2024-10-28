@@ -13,15 +13,24 @@ jobs:
     timeout-minutes: 3
     permissions:
       contents: read
-
+      pull-requests: write
+    env:
+      TURBO_CACHE_DIR: .turbo
+  
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+      - name: Setup cache for Turborepo
+        uses: actions/cache@v4
         with:
-          version: latest
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

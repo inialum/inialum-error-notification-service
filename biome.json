@@ -11,7 +11,8 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"indentStyle": "tab",
+		"ignore": ["packages/javascript/src/types/generated/*.ts"]
 	},
 	"organizeImports": {
 		"enabled": true

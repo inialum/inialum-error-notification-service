@@ -6,6 +6,7 @@
 		"Miniflare",
 		"openapi",
 		"sesv",
+		"tsup",
 		"vitest"
 	],
 	"editor.formatOnSave": true,

@@ -7,16 +7,23 @@
 		"node": ">=20.0.0"
 	},
 	"scripts": {
+		"build": "turbo build",
+		"clean": "turbo clean",
 		"lint": "biome check",
 		"lint:fix": "biome check --write",
-		"test:ci": "pnpm --filter \"./app\" test:ci",
+		"test": "turbo test",
+		"test:ci": "turbo test:ci",
 		"changeset": "changeset",
+		"typecheck": "turbo typecheck",
 		"app": "pnpm --filter \"./app\"",
-		"sdk": "pnpm --filter \"./packages/sdk\""
+		"package-js": "pnpm --filter \"./packages/javascript\"",
+		"package-hono": "pnpm --filter \"./packages/hono\""
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@changesets/cli": "^2.27.9"
+		"@changesets/changelog-github": "^0.5.0",
+		"@changesets/cli": "^2.27.9",
+		"turbo": "^2.2.3"
 	},
 	"packageManager": "pnpm@9.12.2+sha256.2ef6e547b0b07d841d605240dce4d635677831148cd30f6d564b8f4f928f73d2"
 }
