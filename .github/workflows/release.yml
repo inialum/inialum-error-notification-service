@@ -62,13 +62,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm version:ci
           setupGitUser: false
+          version: pnpm version:ci
+          publish: pnpm publish:ci
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-
-      - name: Publish package to npm
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        run: pnpm publish:ci --provenance --dry-run
-        env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
