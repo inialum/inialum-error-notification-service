@@ -63,6 +63,7 @@ jobs:
         uses: changesets/action@v1
         with:
           setupGitUser: false
+          createGithubReleases: true
           version: pnpm version:ci
           publish: pnpm publish:ci
         env:
