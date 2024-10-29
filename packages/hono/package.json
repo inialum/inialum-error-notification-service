@@ -14,7 +14,8 @@
 		"url": "https://github.com/inialum/inialum-error-notification-service"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"provenance": true
 	},
 	"engines": {
 		"node": ">=20.0.0"
