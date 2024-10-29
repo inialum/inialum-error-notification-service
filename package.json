@@ -15,7 +15,7 @@
 		"typecheck": "turbo typecheck",
 		"changeset": "changeset",
 		"version:ci": "changeset version && biome format --write",
-		"publish:ci": "pnpm publish -r --provenance",
+		"publish:ci": "pnpm publish -r --provenance && changeset tag",
 		"clean": "turbo clean",
 		"app": "pnpm --filter \"./app\"",
 		"package-js": "pnpm --filter \"./packages/javascript\"",
