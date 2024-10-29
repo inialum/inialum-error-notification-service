@@ -1,5 +1,13 @@
 # @inialum/error-notification-service-javascript-sdk
 
+## 0.1.5
+
+### Patch Changes
+
+- [#66](https://github.com/inialum/inialum-error-notification-service/pull/66) [`c472d97`](https://github.com/inialum/inialum-error-notification-service/commit/c472d973471947d5165edc82a85923c544a595ae) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Configure provenance for npm
+
+- [#65](https://github.com/inialum/inialum-error-notification-service/pull/65) [`d147ed9`](https://github.com/inialum/inialum-error-notification-service/commit/d147ed9fd3267a85566658db3198205834c09c0e) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Update release CI
+
 ## 0.1.4
 
 ### Patch Changes
