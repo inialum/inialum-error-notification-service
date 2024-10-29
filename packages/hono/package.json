@@ -1,6 +1,6 @@
 {
 	"name": "@inialum/error-notification-service-hono-middleware",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Hono middleware for inialum-error-notification-service",
 	"type": "module",
 	"author": {

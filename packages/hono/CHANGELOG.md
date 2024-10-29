@@ -1,5 +1,14 @@
 # @inialum/error-notification-service-hono-middleware
 
+## 0.1.2
+
+### Patch Changes
+
+- [#57](https://github.com/inialum/inialum-error-notification-service/pull/57) [`aee67be`](https://github.com/inialum/inialum-error-notification-service/commit/aee67be9a168af3a63d42e8fc84b6578a1ce3d23) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Remove `--dry-run` flag
+
+- Updated dependencies [[`aee67be`](https://github.com/inialum/inialum-error-notification-service/commit/aee67be9a168af3a63d42e8fc84b6578a1ce3d23)]:
+  - @inialum/error-notification-service-javascript-sdk@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes
