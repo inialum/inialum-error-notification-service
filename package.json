@@ -14,6 +14,7 @@
 		"test": "turbo test",
 		"test:ci": "turbo test:ci",
 		"changeset": "changeset",
+		"publish:ci": "pnpm publish -r",
 		"typecheck": "turbo typecheck",
 		"app": "pnpm --filter \"./app\"",
 		"package-js": "pnpm --filter \"./packages/javascript\"",
