@@ -14,7 +14,7 @@
 		"test:ci": "turbo test:ci",
 		"typecheck": "turbo typecheck",
 		"changeset": "changeset",
-		"version:ci": "changeset version && biome format",
+		"version:ci": "changeset version && biome format --write",
 		"publish:ci": "pnpm publish -r",
 		"clean": "turbo clean",
 		"app": "pnpm --filter \"./app\"",
