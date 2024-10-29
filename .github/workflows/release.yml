@@ -62,7 +62,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm changeset version && pnpm format
+          version: "pnpm changeset version && pnpm format"
           setupGitUser: false
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
