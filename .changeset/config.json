@@ -12,7 +12,7 @@
 			"@inialum/error-notification-service-hono-middleware"
 		]
 	],
-	"access": "restricted",
+	"access": "public",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
 	"ignore": ["app"]
