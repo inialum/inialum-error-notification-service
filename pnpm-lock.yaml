@@ -63,6 +63,9 @@ importers:
 
   examples/hono-middleware:
     dependencies:
+      '@inialum/error-notification-service-hono-middleware':
+        specifier: latest
+        version: 0.1.4(hono@4.6.7)
       hono:
         specifier: ^4.6.7
         version: 4.6.7
@@ -70,9 +73,6 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20240925.0
         version: 4.20241022.0
-      '@inialum/error-notification-service-hono-middleware':
-        specifier: workspace:^
-        version: link:../../packages/hono
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -798,6 +798,16 @@ packages:
 
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
+
+  '@inialum/error-notification-service-hono-middleware@0.1.4':
+    resolution: {integrity: sha512-1Rv7JTOC6+wTXydjSM8imsKdAx5ESqxyhH+q8WfkzGuehGm+jp59fjRve2heHl52MNlyA+NZz7nFdY+BaCLeLw==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      hono: '>=4.2.0'
+
+  '@inialum/error-notification-service-javascript-sdk@0.1.4':
+    resolution: {integrity: sha512-19NDw+2Y+iAXl5fHCoSqxvw1KGo/AVP0fYhoiEPpx9SsDi2/4gRzsvDU5AszrrNndnhgan1XRCps2rdYmzfzWg==}
+    engines: {node: '>=20.0.0'}
 
   '@inialum/token-generator@0.2.0':
     resolution: {integrity: sha512-DxLi9ZsgSA/a/MX0ClWtgGqbOX4qwgUiMBN6SG61lHTtJ5+eCTBCIB42YD93yhtVL/Q1J3o1sqFuGdekhT95nA==}
@@ -2975,6 +2985,15 @@ snapshots:
       zod: 3.23.8
 
   '@iarna/toml@2.2.5': {}
+
+  '@inialum/error-notification-service-hono-middleware@0.1.4(hono@4.6.7)':
+    dependencies:
+      '@inialum/error-notification-service-javascript-sdk': 0.1.4
+      hono: 4.6.7
+
+  '@inialum/error-notification-service-javascript-sdk@0.1.4':
+    dependencies:
+      openapi-fetch: 0.13.0
 
   '@inialum/token-generator@0.2.0':
     dependencies:
