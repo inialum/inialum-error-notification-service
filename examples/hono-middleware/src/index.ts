@@ -6,9 +6,8 @@ const app = new Hono()
 
 app.use(
 	'*',
-	await notifyError('my-token', {
-		title: 'Some error',
-		description: 'Some error occurred in XXX function',
+	await notifyError({
+		token: 'dummy',
 		serviceName: 'service-name',
 		environment: 'production',
 	}),

@@ -44,7 +44,7 @@ importers:
         version: 0.2.0
       '@vitest/coverage-v8':
         specifier: ^2.1.4
-        version: 2.1.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))
+        version: 2.1.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)))
       discord-api-types:
         specifier: ^0.37.103
         version: 0.37.103
@@ -53,10 +53,10 @@ importers:
         version: 5.6.3
       vitest:
         specifier: ^2.1.4
-        version: 2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))
+        version: 2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))
       vitest-environment-miniflare:
         specifier: ^2.14.4
-        version: 2.14.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))
+        version: 2.14.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)))
       wrangler:
         specifier: ^3.84.1
         version: 3.84.1(@cloudflare/workers-types@4.20241022.0)
@@ -65,7 +65,7 @@ importers:
     dependencies:
       '@inialum/error-notification-service-hono-middleware':
         specifier: latest
-        version: 0.1.5(hono@4.6.8)
+        version: 0.2.0(hono@4.6.8)
       hono:
         specifier: ^4.6.8
         version: 4.6.8
@@ -94,7 +94,7 @@ importers:
         version: 2.0.5
       '@vitest/coverage-v8':
         specifier: ^2.1.4
-        version: 2.1.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))
+        version: 2.1.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)))
       hono:
         specifier: ^4.6.8
         version: 4.6.8
@@ -106,7 +106,7 @@ importers:
         version: 5.6.3
       vitest:
         specifier: ^2.1.4
-        version: 2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))
+        version: 2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))
 
   packages/javascript:
     dependencies:
@@ -122,10 +122,10 @@ importers:
         version: 2.0.5
       '@vitest/coverage-v8':
         specifier: ^2.1.4
-        version: 2.1.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))
+        version: 2.1.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)))
       msw:
         specifier: ^2.6.0
-        version: 2.6.0(@types/node@22.8.1)(typescript@5.6.3)
+        version: 2.6.0(@types/node@22.8.6)(typescript@5.6.3)
       openapi-typescript:
         specifier: ^7.4.2
         version: 7.4.2(typescript@5.6.3)
@@ -137,7 +137,7 @@ importers:
         version: 5.6.3
       vitest:
         specifier: ^2.1.4
-        version: 2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))
+        version: 2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))
 
 packages:
 
@@ -811,14 +811,14 @@ packages:
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  '@inialum/error-notification-service-hono-middleware@0.1.5':
-    resolution: {integrity: sha512-Of/Ut4Uf2aOaen5AUIiyJHoSw6cY7SxiwUh3N5rBjjMKM2OcoTabtpJwWXiFM3sblsMXvWmj4APR3fUy87uHtQ==}
+  '@inialum/error-notification-service-hono-middleware@0.2.0':
+    resolution: {integrity: sha512-CG6EkvnCCP1mVyj/piu/9yWp14d5IHUVa4FnDewkZytXVonomBw/kxsnKUab1Tu594LiJq3OC7FQip1HMPVHCQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       hono: '>=4.2.0'
 
-  '@inialum/error-notification-service-javascript-sdk@0.1.5':
-    resolution: {integrity: sha512-UxbUUycNOaNQalxObmz52TFYVByvtTCb3wGsX51SYYEHSralihygAEH1UxJJ5gIG2zw6WYeD38pUZPtEkQMUoA==}
+  '@inialum/error-notification-service-javascript-sdk@0.2.0':
+    resolution: {integrity: sha512-sq8sNPk/7KuOCiNTAkgFIYbEjcViu0bjZUHrBcN5v6W0pCLQs/lt+BD9Yr3qh1YiF5S6LjVVN60IZFC1h8Ukvw==}
     engines: {node: '>=20.0.0'}
 
   '@inialum/token-generator@0.2.0':
@@ -1187,6 +1187,9 @@ packages:
   '@types/node@22.8.1':
     resolution: {integrity: sha512-k6Gi8Yyo8EtrNtkHXutUu2corfDf9su95VYVP10aGYMMROM6SAItZi0w1XszA6RtWTHSVp5OeFof37w0IEqCQg==}
 
+  '@types/node@22.8.6':
+    resolution: {integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==}
+
   '@types/statuses@2.0.5':
     resolution: {integrity: sha512-jmIUGWrAiwu3dZpxntxieC+1n/5c3mjrImkmOSQ2NC5uP6cYO4aAZDdSmRcI5C1oiTmqlZGHC+/NmJrKogbP5A==}
 
@@ -1235,8 +1238,8 @@ packages:
     resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
     engines: {node: '>=0.4.0'}
 
-  acorn@8.13.0:
-    resolution: {integrity: sha512-8zSiw54Oxrdym50NlZ9sUusyO1Z1ZchgRLWRaK6c86XJFClyCgFKetdowBg5bKxyp/u+CDBJG4Mpp0m3HLZl9w==}
+  acorn@8.14.0:
+    resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -2354,8 +2357,8 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  tslib@2.8.0:
-    resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   tsup@8.3.5:
     resolution: {integrity: sha512-Tunf6r6m6tnZsG9GYWndg0z8dEV7fD733VBFzFJ5Vcm1FtlXB8xBD/rtrBi2a3YKEV7hHtxiZtW5EAVADoe1pA==}
@@ -3162,12 +3165,12 @@ snapshots:
 
   '@iarna/toml@2.2.5': {}
 
-  '@inialum/error-notification-service-hono-middleware@0.1.5(hono@4.6.8)':
+  '@inialum/error-notification-service-hono-middleware@0.2.0(hono@4.6.8)':
     dependencies:
-      '@inialum/error-notification-service-javascript-sdk': 0.1.5
+      '@inialum/error-notification-service-javascript-sdk': 0.2.0
       hono: 4.6.8
 
-  '@inialum/error-notification-service-javascript-sdk@0.1.5':
+  '@inialum/error-notification-service-javascript-sdk@0.2.0':
     dependencies:
       openapi-fetch: 0.13.0
 
@@ -3177,16 +3180,16 @@ snapshots:
       '@dotenvx/dotenvx': 1.21.0
       jose: 5.9.6
 
-  '@inquirer/confirm@5.0.1(@types/node@22.8.1)':
+  '@inquirer/confirm@5.0.1(@types/node@22.8.6)':
     dependencies:
-      '@inquirer/core': 10.0.1(@types/node@22.8.1)
-      '@inquirer/type': 3.0.0(@types/node@22.8.1)
-      '@types/node': 22.8.1
+      '@inquirer/core': 10.0.1(@types/node@22.8.6)
+      '@inquirer/type': 3.0.0(@types/node@22.8.6)
+      '@types/node': 22.8.6
 
-  '@inquirer/core@10.0.1(@types/node@22.8.1)':
+  '@inquirer/core@10.0.1(@types/node@22.8.6)':
     dependencies:
       '@inquirer/figures': 1.0.7
-      '@inquirer/type': 3.0.0(@types/node@22.8.1)
+      '@inquirer/type': 3.0.0(@types/node@22.8.6)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -3199,9 +3202,9 @@ snapshots:
 
   '@inquirer/figures@1.0.7': {}
 
-  '@inquirer/type@3.0.0(@types/node@22.8.1)':
+  '@inquirer/type@3.0.0(@types/node@22.8.6)':
     dependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.6
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -3546,7 +3549,7 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.6
 
   '@types/node@12.20.55': {}
 
@@ -3554,11 +3557,15 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/node@22.8.6':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/statuses@2.0.5': {}
 
   '@types/tough-cookie@4.0.5': {}
 
-  '@vitest/coverage-v8@2.1.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))':
+  '@vitest/coverage-v8@2.1.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -3572,7 +3579,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))
+      vitest: 2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -3583,14 +3590,14 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.4(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.1))':
+  '@vitest/mocker@2.1.4(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.6))':
     dependencies:
       '@vitest/spy': 2.1.4
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
-      msw: 2.6.0(@types/node@22.8.1)(typescript@5.6.3)
-      vite: 5.4.10(@types/node@22.8.1)
+      msw: 2.6.0(@types/node@22.8.6)(typescript@5.6.3)
+      vite: 5.4.10(@types/node@22.8.6)
 
   '@vitest/pretty-format@2.1.4':
     dependencies:
@@ -3619,9 +3626,9 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.13.0
+      acorn: 8.14.0
 
-  acorn@8.13.0: {}
+  acorn@8.14.0: {}
 
   agent-base@7.1.1(supports-color@9.4.0):
     dependencies:
@@ -3702,7 +3709,7 @@ snapshots:
   capnp-ts@0.7.0:
     dependencies:
       debug: 4.3.7(supports-color@9.4.0)
-      tslib: 2.8.0
+      tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
 
@@ -4227,7 +4234,7 @@ snapshots:
   miniflare@3.20241022.0:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      acorn: 8.13.0
+      acorn: 8.14.0
       acorn-walk: 8.3.4
       capnp-ts: 0.7.0
       exit-hook: 2.2.1
@@ -4257,12 +4264,12 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3):
+  msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
-      '@inquirer/confirm': 5.0.1(@types/node@22.8.1)
+      '@inquirer/confirm': 5.0.1(@types/node@22.8.6)
       '@mswjs/interceptors': 0.36.7
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/until': 2.1.0
@@ -4708,7 +4715,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tslib@2.8.0: {}
+  tslib@2.8.1: {}
 
   tsup@8.3.5(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0):
     dependencies:
@@ -4802,12 +4809,12 @@ snapshots:
     dependencies:
       builtins: 5.1.0
 
-  vite-node@2.1.4(@types/node@22.8.1):
+  vite-node@2.1.4(@types/node@22.8.6):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7(supports-color@9.4.0)
       pathe: 1.1.2
-      vite: 5.4.10(@types/node@22.8.1)
+      vite: 5.4.10(@types/node@22.8.6)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4819,31 +4826,31 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.4.10(@types/node@22.8.1):
+  vite@5.4.10(@types/node@22.8.6):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.1
     optionalDependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.6
       fsevents: 2.3.3
 
-  vitest-environment-miniflare@2.14.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))):
+  vitest-environment-miniflare@2.14.4(vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))):
     dependencies:
       '@miniflare/queues': 2.14.4
       '@miniflare/runner-vm': 2.14.4
       '@miniflare/shared': 2.14.4
       '@miniflare/shared-test-environment': 2.14.4
       undici: 5.28.4
-      vitest: 2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))
+      vitest: 2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)):
+  vitest@2.1.4(@types/node@22.8.6)(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3)):
     dependencies:
       '@vitest/expect': 2.1.4
-      '@vitest/mocker': 2.1.4(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.1))
+      '@vitest/mocker': 2.1.4(msw@2.6.0(@types/node@22.8.6)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.6))
       '@vitest/pretty-format': 2.1.4
       '@vitest/runner': 2.1.4
       '@vitest/snapshot': 2.1.4
@@ -4859,11 +4866,11 @@ snapshots:
       tinyexec: 0.3.1
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
-      vite: 5.4.10(@types/node@22.8.1)
-      vite-node: 2.1.4(@types/node@22.8.1)
+      vite: 5.4.10(@types/node@22.8.6)
+      vite-node: 2.1.4(@types/node@22.8.6)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.6
     transitivePeerDependencies:
       - less
       - lightningcss
