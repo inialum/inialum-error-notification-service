@@ -1,4 +1,4 @@
-import { server } from './mocks/node.js'
+import { server } from './mocks/node'
 
 beforeAll(() => {
 	server.listen()
