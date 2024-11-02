@@ -8,5 +8,5 @@
 	"access": "public",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
-	"ignore": ["app", "examples/**"]
+	"ignore": ["app", "hono-middleware-example"]
 }
