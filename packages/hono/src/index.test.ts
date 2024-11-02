@@ -7,10 +7,10 @@ describe('Hono middleware', async () => {
 
 	const app = new Hono()
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		app.use(
 			'*',
-			await notifyError({
+			notifyError({
 				token: 'dummy',
 				serviceName: 'service-name',
 				environment: 'production',
