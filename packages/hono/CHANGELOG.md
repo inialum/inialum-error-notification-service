@@ -1,5 +1,16 @@
 # @inialum/error-notification-service-hono-middleware
 
+## 0.2.0
+
+### Minor Changes
+
+- [#70](https://github.com/inialum/inialum-error-notification-service/pull/70) [`01d989d`](https://github.com/inialum/inialum-error-notification-service/commit/01d989d1f7e4dad1d5cbd2a5a130169d4ba10220) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Update arguments of the middleware
+
+### Patch Changes
+
+- Updated dependencies [[`35bce41`](https://github.com/inialum/inialum-error-notification-service/commit/35bce416268ba09943af417d20f9e6f999967441)]:
+  - @inialum/error-notification-service-javascript-sdk@0.2.0
+
 ## 0.1.5
 
 ### Patch Changes
