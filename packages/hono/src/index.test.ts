@@ -3,10 +3,10 @@ import type { MockInstance } from 'vitest'
 import { notifyError } from '.'
 
 describe('Hono middleware', async () => {
-	let mockedInstance: MockInstance
+	let mockedFetch: MockInstance
 
 	beforeEach(() => {
-		mockedInstance = vi.spyOn(global, 'fetch').mockResolvedValue(
+		mockedFetch = vi.spyOn(global, 'fetch').mockResolvedValue(
 			new Response(
 				JSON.stringify({
 					status: 'ok',
@@ -23,9 +23,8 @@ describe('Hono middleware', async () => {
 
 	app.use(
 		'*',
-		await notifyError('123', {
-			title: 'Some error',
-			description: 'Some error occurred in XXX function',
+		await notifyError({
+			token: 'dummy',
 			serviceName: 'service-name',
 			environment: 'production',
 		}),
@@ -45,7 +44,7 @@ describe('Hono middleware', async () => {
 			},
 		})
 
-		expect(mockedInstance).not.toHaveBeenCalled()
+		expect(mockedFetch).not.toHaveBeenCalled()
 	})
 
 	test('should call fetch function in the notifyError middleware when an error occurs', async () => {
@@ -59,6 +58,6 @@ describe('Hono middleware', async () => {
 			},
 		})
 
-		expect(mockedInstance).toHaveBeenCalled()
+		expect(mockedFetch).toHaveBeenCalled()
 	})
 })
