@@ -5,15 +5,8 @@
 		{ "repo": "inialum/inialum-error-notification-service" }
 	],
 	"commit": false,
-	"fixed": [],
-	"linked": [
-		[
-			"@inialum/error-notification-service-javascript-sdk",
-			"@inialum/error-notification-service-hono-middleware"
-		]
-	],
 	"access": "public",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
-	"ignore": ["app"]
+	"ignore": ["app", "hono-middleware-example"]
 }

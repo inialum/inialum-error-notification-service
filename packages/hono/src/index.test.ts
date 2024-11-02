@@ -1,12 +1,31 @@
 import { Hono } from 'hono'
 import type { MockInstance } from 'vitest'
-import { notifyError } from '.'
+import { notifyError } from './index'
 
 describe('Hono middleware', async () => {
-	let mockedInstance: MockInstance
+	let mockedFetch: MockInstance
+
+	const app = new Hono()
+
+	beforeAll(async () => {
+		app.use(
+			'*',
+			await notifyError({
+				token: 'dummy',
+				serviceName: 'service-name',
+				environment: 'production',
+			}),
+		)
+		app.get('/test-ok', async () => {
+			return new Response('OK', { status: 200 })
+		})
+		app.get('/test-error', async () => {
+			throw new Error('some error')
+		})
+	})
 
 	beforeEach(() => {
-		mockedInstance = vi.spyOn(global, 'fetch').mockResolvedValue(
+		mockedFetch = vi.spyOn(global, 'fetch').mockResolvedValue(
 			new Response(
 				JSON.stringify({
 					status: 'ok',
@@ -19,24 +38,6 @@ describe('Hono middleware', async () => {
 		vi.restoreAllMocks()
 	})
 
-	const app = new Hono()
-
-	app.use(
-		'*',
-		await notifyError('123', {
-			title: 'Some error',
-			description: 'Some error occurred in XXX function',
-			serviceName: 'service-name',
-			environment: 'production',
-		}),
-	)
-	app.get('/test-ok', async () => {
-		return new Response('OK', { status: 200 })
-	})
-	app.get('/test-error', async () => {
-		throw new Error('some error')
-	})
-
 	test('should not call fetch function in the notifyError middleware when no error occurs', async () => {
 		await app.request('/test-ok', {
 			method: 'GET',
@@ -45,7 +46,7 @@ describe('Hono middleware', async () => {
 			},
 		})
 
-		expect(mockedInstance).not.toHaveBeenCalled()
+		expect(mockedFetch).not.toHaveBeenCalled()
 	})
 
 	test('should call fetch function in the notifyError middleware when an error occurs', async () => {
@@ -59,6 +60,6 @@ describe('Hono middleware', async () => {
 			},
 		})
 
-		expect(mockedInstance).toHaveBeenCalled()
+		expect(mockedFetch).toHaveBeenCalled()
 	})
 })

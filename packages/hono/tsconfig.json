@@ -7,11 +7,7 @@
 		"module": "esnext",
 		"moduleResolution": "Bundler",
 		"exactOptionalPropertyTypes": false,
-		"types": ["vitest/globals"],
-		"paths": {
-			"@/*": ["./src/*"],
-			"@Root/*": ["./*"]
-		}
+		"types": ["vitest/globals"]
 	},
 	"include": ["**/*.ts"],
 	"exclude": ["dist", "node_modules"]

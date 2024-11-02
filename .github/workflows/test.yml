@@ -13,9 +13,7 @@ jobs:
     timeout-minutes: 3
     permissions:
       contents: read
-    env:
-      TURBO_CACHE_DIR: .turbo
-  
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,6 +40,9 @@ jobs:
 
       - name: Run linter
         run: pnpm lint
+
+      - name: Run typecheck
+        run: pnpm typecheck
 
       - name: Run test
         run: pnpm test:ci
