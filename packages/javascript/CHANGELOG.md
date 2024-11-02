@@ -1,5 +1,11 @@
 # @inialum/error-notification-service-javascript-sdk
 
+## 0.2.0
+
+### Minor Changes
+
+- [#70](https://github.com/inialum/inialum-error-notification-service/pull/70) [`35bce41`](https://github.com/inialum/inialum-error-notification-service/commit/35bce416268ba09943af417d20f9e6f999967441) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Update arguments of notifyError function
+
 ## 0.1.5
 
 ### Patch Changes
