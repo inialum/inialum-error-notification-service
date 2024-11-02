@@ -25,13 +25,13 @@ importers:
     dependencies:
       '@hono/swagger-ui':
         specifier: ^0.4.1
-        version: 0.4.1(hono@4.6.7)
+        version: 0.4.1(hono@4.6.8)
       '@hono/zod-openapi':
         specifier: ^0.16.4
-        version: 0.16.4(hono@4.6.7)(zod@3.23.8)
+        version: 0.16.4(hono@4.6.8)(zod@3.23.8)
       hono:
-        specifier: ^4.6.7
-        version: 4.6.7
+        specifier: ^4.6.8
+        version: 4.6.8
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -65,10 +65,10 @@ importers:
     dependencies:
       '@inialum/error-notification-service-hono-middleware':
         specifier: latest
-        version: 0.1.5(hono@4.6.7)
+        version: 0.1.5(hono@4.6.8)
       hono:
-        specifier: ^4.6.7
-        version: 4.6.7
+        specifier: ^4.6.8
+        version: 4.6.8
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20240925.0
@@ -96,8 +96,8 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4(vitest@2.1.4(@types/node@22.8.1)(msw@2.6.0(@types/node@22.8.1)(typescript@5.6.3)))
       hono:
-        specifier: ^4.2.1
-        version: 4.6.7
+        specifier: ^4.6.8
+        version: 4.6.8
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
@@ -1620,8 +1620,8 @@ packages:
   headers-polyfill@4.0.3:
     resolution: {integrity: sha512-IScLbePpkvO846sIwOtOTDjutRMWdXdJmXdMvk6gCBHxFO8d+QKOQedyZSxFTTFYRSmlgSTDtXqqq4pcenBXLQ==}
 
-  hono@4.6.7:
-    resolution: {integrity: sha512-wX4ZbOnzfNO61hUjuQbJ7OPGs1fWXXVVJ8VTPDb2Ls/x9HjCbVTm80Je6VTHMz5n5RGDtBgV9d9ZFZxBqx56ng==}
+  hono@4.6.8:
+    resolution: {integrity: sha512-f+2Ec9JAzabT61pglDiLJcF/DjiSefZkjCn9bzm1cYLGkD5ExJ3Jnv93ax9h0bn7UPLHF81KktoyjdQfWI2n1Q==}
     engines: {node: '>=16.9.0'}
 
   html-escaper@2.0.2:
@@ -3144,28 +3144,28 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/swagger-ui@0.4.1(hono@4.6.7)':
+  '@hono/swagger-ui@0.4.1(hono@4.6.8)':
     dependencies:
-      hono: 4.6.7
+      hono: 4.6.8
 
-  '@hono/zod-openapi@0.16.4(hono@4.6.7)(zod@3.23.8)':
+  '@hono/zod-openapi@0.16.4(hono@4.6.8)(zod@3.23.8)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 7.2.0(zod@3.23.8)
-      '@hono/zod-validator': 0.3.0(hono@4.6.7)(zod@3.23.8)
-      hono: 4.6.7
+      '@hono/zod-validator': 0.3.0(hono@4.6.8)(zod@3.23.8)
+      hono: 4.6.8
       zod: 3.23.8
 
-  '@hono/zod-validator@0.3.0(hono@4.6.7)(zod@3.23.8)':
+  '@hono/zod-validator@0.3.0(hono@4.6.8)(zod@3.23.8)':
     dependencies:
-      hono: 4.6.7
+      hono: 4.6.8
       zod: 3.23.8
 
   '@iarna/toml@2.2.5': {}
 
-  '@inialum/error-notification-service-hono-middleware@0.1.5(hono@4.6.7)':
+  '@inialum/error-notification-service-hono-middleware@0.1.5(hono@4.6.8)':
     dependencies:
       '@inialum/error-notification-service-javascript-sdk': 0.1.5
-      hono: 4.6.7
+      hono: 4.6.8
 
   '@inialum/error-notification-service-javascript-sdk@0.1.5':
     dependencies:
@@ -4049,7 +4049,7 @@ snapshots:
 
   headers-polyfill@4.0.3: {}
 
-  hono@4.6.7: {}
+  hono@4.6.8: {}
 
   html-escaper@2.0.2: {}
 
