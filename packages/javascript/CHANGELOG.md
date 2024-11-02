@@ -1,5 +1,11 @@
 # @inialum/error-notification-service-javascript-sdk
 
+## 0.2.1
+
+### Patch Changes
+
+- [#73](https://github.com/inialum/inialum-error-notification-service/pull/73) [`50a19e1`](https://github.com/inialum/inialum-error-notification-service/commit/50a19e11daf8ccd5cac58a44f7a7a890ff8a8919) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Fix typo in README files
+
 ## 0.2.0
 
 ### Minor Changes
