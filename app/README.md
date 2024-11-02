@@ -1,4 +1,4 @@
-# inialum-error-notification-service (app)
+# inialum-error-notification-service
 
 Microservice for sending error notification
 
@@ -48,8 +48,7 @@ pnpm run test:coverage
 
 ### OpenAPI Specification
 
-OpenAPI Specification (OAS) is a standard, language-agnostic interface to RESTful APIs. This service uses OAS to describe its API and it is powered by [Zod OpenAPI Hono
-](https://github.com/honojs/middleware/tree/main/packages/zod-openapi). The service hosts the OAS file on `/schema/v1` endpoint.
+OpenAPI Specification (OAS) is a standard, language-agnostic interface to RESTful APIs. This service uses OAS to describe its API and it is powered by [Zod OpenAPI Hono](https://github.com/honojs/middleware/tree/main/packages/zod-openapi). The service hosts the OAS file on `/schema/v1` endpoint.
 
 ### Swagger UI
 
@@ -74,4 +73,3 @@ You can access the Swagger UI by visiting [here](https://error-notification-api.
 ## Deployment
 
 This service is deployed to [Cloudflare Workers](https://workers.cloudflare.com) using GitHub Actions. When a new commit is pushed to `main` branch, the service will be automatically deployed.
-
