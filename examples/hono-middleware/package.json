@@ -6,7 +6,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@inialum/error-notification-service-hono-middleware": "latest",
+		"@inialum/error-notification-service-hono-middleware": "workspace:^",
 		"hono": "^4.6.8"
 	},
 	"devDependencies": {

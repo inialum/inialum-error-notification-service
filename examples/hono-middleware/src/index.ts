@@ -1,17 +1,22 @@
 import { Hono } from 'hono'
+import { env } from 'hono/adapter'
 
 import { notifyError } from '@inialum/error-notification-service-hono-middleware'
 
 const app = new Hono()
 
-app.use(
-	'*',
-	await notifyError({
-		token: 'dummy',
-		serviceName: 'service-name',
+app.use('*', async (c, next) => {
+	const { ERROR_NOTIFICATION_TOKEN } = env<{
+		ERROR_NOTIFICATION_TOKEN: string
+	}>(c)
+	const handleError = notifyError({
+		token: ERROR_NOTIFICATION_TOKEN,
+		serviceName: 'example-service',
 		environment: 'production',
-	}),
-)
+	})
+
+	return await handleError(c, next)
+})
 
 app.get('/', () => {
 	throw new Error('Error occurred!')

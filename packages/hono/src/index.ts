@@ -22,7 +22,7 @@ type Options = Omit<
  *
  * const app = new Hono()
  *
- * app.use('*', await notifyError({
+ * app.use('*', notifyError({
  * 	token: 'dummy',
  * 	serviceName: 'service-name',
  * 	environment: 'production'
@@ -33,11 +33,7 @@ type Options = Omit<
  * export default app
  * ```
  */
-export const notifyError = async ({
-	token,
-	serviceName,
-	environment,
-}: Options) => {
+export const notifyError = ({ token, serviceName, environment }: Options) => {
 	return createMiddleware(async (c, next) => {
 		await next()
 
