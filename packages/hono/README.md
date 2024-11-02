@@ -7,7 +7,7 @@ Hono middleware for inialum-error-notification-service.
 ## Installation
 
 ```shell
-pnpm install @inialum/error-notification-service-hono-middleware
+pnpm add @inialum/error-notification-service-hono-middleware
 ```
 
 ## Usage

@@ -7,7 +7,7 @@ JavaScript client SDK for inialum-error-notification-service.
 ## Installation
 
 ```shell
-pnpm install @inialum/error-notification-service-javascript-sdk
+pnpm add @inialum/error-notification-service-javascript-sdk
 ```
 
 ## Usage
