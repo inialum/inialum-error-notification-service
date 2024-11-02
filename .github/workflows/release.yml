@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'packages/**'
-      - '!**.md'
   workflow_dispatch:
 
 jobs:
