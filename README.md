@@ -1,11 +1,11 @@
 # inialum-error-notification-service
 
-This is a monorepo project that contains the following application and packages:
+This is a monorepo project that contains the following microservice and packages:
 
-## [Application](app)
+## [Microservice](app)
 
-The microservice application for sending error notification.  
-This application is designed to be deployed on Cloudflare Workers.
+The microservice for sending error notification.  
+This is designed to be deployed on Cloudflare Workers.
 
 ## [JavaScript SDK](packages/javascript)
 
