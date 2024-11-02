@@ -5,6 +5,25 @@ import { notifyError } from '.'
 describe('Hono middleware', async () => {
 	let mockedFetch: MockInstance
 
+	const app = new Hono()
+
+	beforeAll(async () => {
+		app.use(
+			'*',
+			await notifyError({
+				token: 'dummy',
+				serviceName: 'service-name',
+				environment: 'production',
+			}),
+		)
+		app.get('/test-ok', async () => {
+			return new Response('OK', { status: 200 })
+		})
+		app.get('/test-error', async () => {
+			throw new Error('some error')
+		})
+	})
+
 	beforeEach(() => {
 		mockedFetch = vi.spyOn(global, 'fetch').mockResolvedValue(
 			new Response(
@@ -17,23 +36,6 @@ describe('Hono middleware', async () => {
 
 	afterEach(() => {
 		vi.restoreAllMocks()
-	})
-
-	const app = new Hono()
-
-	app.use(
-		'*',
-		await notifyError({
-			token: 'dummy',
-			serviceName: 'service-name',
-			environment: 'production',
-		}),
-	)
-	app.get('/test-ok', async () => {
-		return new Response('OK', { status: 200 })
-	})
-	app.get('/test-error', async () => {
-		throw new Error('some error')
 	})
 
 	test('should not call fetch function in the notifyError middleware when no error occurs', async () => {
