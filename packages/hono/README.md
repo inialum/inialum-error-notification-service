@@ -18,7 +18,7 @@ import { notifyError } from '@inialum/error-notification-service-hono-middleware
 
 const app = new Hono()
 
-app.use('*', await notifyError({
+app.use('*', notifyError({
  token: 'dummy',
  serviceName: 'service-name',
  environment: 'production'
@@ -29,7 +29,7 @@ app.get('/', (c) => c.text('foo'))
 export default app
 ```
 
-You can refer to the [example project](../../examples/hono-middleware) for more details.
+You can refer to the [example project](/examples/hono-middleware) for more details.
 
 ## Development
 
