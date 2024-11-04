@@ -29,7 +29,7 @@ app.get('/', (c) => c.text('foo'))
 export default app
 ```
 
-You can refer to the [example project](/examples/hono-middleware) for more details.
+You can refer to the [example project](examples/hono-middleware) for more details.
 
 ## Development
 
