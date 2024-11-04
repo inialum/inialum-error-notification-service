@@ -44,7 +44,7 @@ describe('JavaScript SDK', () => {
 		})
 	})
 
-	test('should send error information with error object and overrode custom title and description', async () => {
+	test('should send error information with error object and custom title and description', async () => {
 		const errorObject = new CustomError('Custom error message')
 
 		const pendingRequest = waitForRequest(
