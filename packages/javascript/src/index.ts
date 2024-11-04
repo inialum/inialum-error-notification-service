@@ -41,7 +41,7 @@ export const notifyError = async (
 			baseUrl: ERROR_NOTIFICATION_API_BASE_URL,
 		})
 
-		const { data, error } = await client.POST('/api/v1/notify', {
+		const { error } = await client.POST('/api/v1/notify', {
 			body: {
 				title: title || errorObject.name,
 				description: description || errorObject.message,
@@ -55,16 +55,9 @@ export const notifyError = async (
 		})
 
 		if (error) {
-			console.error(error)
-			throw new Error('Failed to notify error')
+			console.warn(error)
 		}
-		return data
 	} catch (error) {
-		console.error(error)
-
-		if (error instanceof Error) {
-			throw error
-		}
-		throw new Error('Failed to notify error')
+		console.warn(error)
 	}
 }
