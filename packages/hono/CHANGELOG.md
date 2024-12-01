@@ -1,5 +1,11 @@
 # @inialum/error-notification-service-hono-middleware
 
+## 0.2.2
+
+### Patch Changes
+
+- [#77](https://github.com/inialum/inialum-error-notification-service/pull/77) [`2a7aa27`](https://github.com/inialum/inialum-error-notification-service/commit/2a7aa27312e62bba445ab3d7854fb75e15b286e4) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Fix typo in README
+
 ## 0.2.1
 
 ### Patch Changes
