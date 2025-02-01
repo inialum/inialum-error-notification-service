@@ -24,7 +24,7 @@
 		"@cloudflare/workers-types": "^4.20241022.0",
 		"@inialum/token-generator": "^0.2.0",
 		"@vitest/coverage-v8": "^2.1.6",
-		"discord-api-types": "^0.37.103",
+		"discord-api-types": "^0.37.118",
 		"typescript": "^5.6.3",
 		"vitest": "^2.1.6",
 		"vitest-environment-miniflare": "^2.14.4",
