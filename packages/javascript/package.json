@@ -39,7 +39,7 @@
 		"@tsconfig/strictest": "^2.0.5",
 		"@vitest/coverage-v8": "^3.0.7",
 		"msw": "^2.7.3",
-		"openapi-typescript": "^7.4.2",
+		"openapi-typescript": "^7.6.1",
 		"tsup": "^8.3.5",
 		"typescript": "^5.4.3",
 		"vitest": "^3.0.7"
