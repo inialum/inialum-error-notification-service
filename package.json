@@ -9,7 +9,7 @@
 	"scripts": {
 		"build": "turbo build",
 		"lint": "biome check",
-		"lint:fix": "biome check --write",
+		"fix": "biome check --write",
 		"test": "turbo test",
 		"test:ci": "turbo test:ci",
 		"typecheck": "turbo typecheck",
