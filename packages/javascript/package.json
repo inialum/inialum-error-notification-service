@@ -37,8 +37,8 @@
 	"devDependencies": {
 		"@vitest/coverage-v8": "^3.0.7",
 		"msw": "^2.7.3",
-		"openapi-typescript": "^7.4.2",
-		"tsup": "^8.3.5",
+		"openapi-typescript": "^7.6.1",
+		"tsup": "^8.4.0",
 		"typescript": "^5.8.2",
 		"vitest": "^3.0.7"
 	}
