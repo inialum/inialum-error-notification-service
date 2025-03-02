@@ -43,7 +43,7 @@ export interface paths {
                     };
                     content: {
                         "application/json": {
-                            /** @example Invalid request body */
+                            /** @example Validation error */
                             message: string;
                             /** @example [
                              *       {
@@ -51,18 +51,12 @@ export interface paths {
                              *         "expected": "string",
                              *         "received": "undefined",
                              *         "path": [
-                             *           "message"
+                             *           "title"
                              *         ],
                              *         "message": "This field is required"
                              *       }
                              *     ] */
-                            issues: {
-                                code: string;
-                                expected: string;
-                                received: string;
-                                path: string[];
-                                message: string;
-                            }[];
+                            issues?: unknown;
                         };
                     };
                 };
@@ -73,7 +67,7 @@ export interface paths {
                     };
                     content: {
                         "application/json": {
-                            /** @example Failed to notify error */
+                            /** @example Internal server error */
                             message: string;
                         };
                     };
