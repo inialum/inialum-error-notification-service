@@ -7,7 +7,7 @@
 	},
 	"dependencies": {
 		"@inialum/error-notification-service-hono-middleware": "workspace:^",
-		"hono": "^4.6.8"
+		"hono": "^4.7.2"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250224.0",
