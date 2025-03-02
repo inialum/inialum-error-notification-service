@@ -1,5 +1,24 @@
 # @inialum/error-notification-service-hono-middleware
 
+## 0.3.0
+
+### Minor Changes
+
+- [#112](https://github.com/inialum/inialum-error-notification-service/pull/112) [`9e87b99`](https://github.com/inialum/inialum-error-notification-service/commit/9e87b990525c942a437c7612fe36422effed189e) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Export option type
+
+### Patch Changes
+
+- [#77](https://github.com/inialum/inialum-error-notification-service/pull/77) [`2a7aa27`](https://github.com/inialum/inialum-error-notification-service/commit/2a7aa27312e62bba445ab3d7854fb75e15b286e4) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Fix typo in README
+
+- [#121](https://github.com/inialum/inialum-error-notification-service/pull/121) [`fe1e58a`](https://github.com/inialum/inialum-error-notification-service/commit/fe1e58a75a26239be1abdb4910d0c93be9a0b139) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): Bump the dev group across 1 directory with 8 updates
+
+- [#120](https://github.com/inialum/inialum-error-notification-service/pull/120) [`7661d6c`](https://github.com/inialum/inialum-error-notification-service/commit/7661d6c60a6a902bb821a3fe4add878d5a508bc1) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Organize tsconfig
+
+- [#106](https://github.com/inialum/inialum-error-notification-service/pull/106) [`e47b950`](https://github.com/inialum/inialum-error-notification-service/commit/e47b950dc025e096524cc03fd6bc11d895b63a95) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): Bump the test group across 1 directory with 2 updates
+
+- Updated dependencies [[`9e87b99`](https://github.com/inialum/inialum-error-notification-service/commit/9e87b990525c942a437c7612fe36422effed189e), [`fe1e58a`](https://github.com/inialum/inialum-error-notification-service/commit/fe1e58a75a26239be1abdb4910d0c93be9a0b139), [`7661d6c`](https://github.com/inialum/inialum-error-notification-service/commit/7661d6c60a6a902bb821a3fe4add878d5a508bc1), [`0ae2d8f`](https://github.com/inialum/inialum-error-notification-service/commit/0ae2d8fb46b245244c19fd0758e73a8fc06da4ff), [`e47b950`](https://github.com/inialum/inialum-error-notification-service/commit/e47b950dc025e096524cc03fd6bc11d895b63a95), [`76da914`](https://github.com/inialum/inialum-error-notification-service/commit/76da914b91b1295d34fc6e2f30e147e920b31ad3)]:
+  - @inialum/error-notification-service-javascript-sdk@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes
