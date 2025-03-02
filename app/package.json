@@ -23,7 +23,7 @@
 		"@inialum/token-generator": "^0.2.0",
 		"@vitest/coverage-v8": "^3.0.7",
 		"discord-api-types": "^0.37.103",
-		"typescript": "^5.6.3",
+		"typescript": "^5.8.2",
 		"vitest": "^3.0.7",
 		"vitest-environment-miniflare": "^2.14.4",
 		"wrangler": "^3.84.1"
