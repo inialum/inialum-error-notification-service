@@ -46,8 +46,8 @@ importers:
         specifier: ^3.0.7
         version: 3.0.7(vitest@3.0.7(@types/node@22.8.6)(msw@2.7.3(@types/node@22.8.6)(typescript@5.6.3))(yaml@2.6.0))
       discord-api-types:
-        specifier: ^0.37.103
-        version: 0.37.103
+        specifier: ^0.37.119
+        version: 0.37.119
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -1477,8 +1477,8 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
-  discord-api-types@0.37.103:
-    resolution: {integrity: sha512-r+qitxXKe2l6KFw5odPdZSSqdEou+7eNC7BfbZ7mny5Me/K06wCTeKUMVeH/YsI9+4QQudskeQ307kr/7ppQ1A==}
+  discord-api-types@0.37.119:
+    resolution: {integrity: sha512-WasbGFXEB+VQWXlo6IpW3oUv73Yuau1Ig4AZF/m13tXcTKnMpc/mHjpztIlz4+BM9FG9BHQkEXiPto3bKduQUg==}
 
   dotenv@10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
@@ -3891,7 +3891,7 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
-  discord-api-types@0.37.103: {}
+  discord-api-types@0.37.119: {}
 
   dotenv@10.0.0: {}
 
