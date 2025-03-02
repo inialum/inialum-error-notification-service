@@ -1,13 +1,9 @@
 {
-	"extends": [
-		"@tsconfig/recommended/tsconfig.json",
-		"@tsconfig/strictest/tsconfig.json"
-	],
+	"extends": ["../../tsconfig.base.json"],
 	"compilerOptions": {
-		"module": "esnext",
-		"moduleResolution": "Bundler",
-		"exactOptionalPropertyTypes": false,
-		"types": ["vitest/globals"]
+		"types": ["vitest/globals"],
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx"
 	},
 	"include": ["**/*.ts"],
 	"exclude": ["dist", "node_modules"]
