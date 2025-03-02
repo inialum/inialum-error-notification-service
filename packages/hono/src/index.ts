@@ -1,8 +1,11 @@
 import { createMiddleware } from 'hono/factory'
 
-import { notifyError as notifyErrorJsSdk } from '@inialum/error-notification-service-javascript-sdk'
+import {
+	notifyError as notifyErrorJsSdk,
+	type EnvironmentType,
+} from '@inialum/error-notification-service-javascript-sdk'
 
-type Options = Omit<
+type ErrorNotificationOptions = Omit<
 	Parameters<typeof notifyErrorJsSdk>[1],
 	'title' | 'description'
 >
@@ -10,10 +13,10 @@ type Options = Omit<
 /**
  * Hono middleware to notify an error using the JavaScript SDK of inialum-error-notification-service.
  *
- * @param {Options} options - The options to configure the Hono middleware.
+ * @param {ErrorNotificationOptions} options - The options to configure the Hono middleware.
  * @param {string} options.token - The token used for authentication with the Hono middleware.
  * @param {string} options.serviceName - The name of the service that encountered the error.
- * @param {Options['environment']} options.environment - The environment in which the error occurred.
+ * @param {EnvironmentType} options.environment - The environment in which the error occurred.
  *
  * @example
  * ```ts
@@ -33,7 +36,11 @@ type Options = Omit<
  * export default app
  * ```
  */
-export const notifyError = ({ token, serviceName, environment }: Options) => {
+export const notifyError = ({
+	token,
+	serviceName,
+	environment,
+}: ErrorNotificationOptions) => {
 	return createMiddleware(async (c, next) => {
 		await next()
 
@@ -48,3 +55,5 @@ export const notifyError = ({ token, serviceName, environment }: Options) => {
 		}
 	})
 }
+
+export type { ErrorNotificationOptions, EnvironmentType }
