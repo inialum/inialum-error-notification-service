@@ -1,8 +1,8 @@
 import { createMiddleware } from 'hono/factory'
 
 import {
-	notifyError as notifyErrorJsSdk,
 	type EnvironmentType,
+	notifyError as notifyErrorJsSdk,
 } from '@inialum/error-notification-service-javascript-sdk'
 
 type ErrorNotificationOptions = Omit<

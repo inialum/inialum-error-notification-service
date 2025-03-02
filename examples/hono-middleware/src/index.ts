@@ -2,8 +2,8 @@ import { Hono } from 'hono'
 import { env } from 'hono/adapter'
 
 import {
-	notifyError,
 	type EnvironmentType,
+	notifyError,
 } from '@inialum/error-notification-service-hono-middleware'
 
 const app = new Hono()
