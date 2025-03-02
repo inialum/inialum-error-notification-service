@@ -1,6 +1,6 @@
 import type { EnvironmentType } from './Environment'
 
-export type ErrorNotifyOptions = {
+export type ErrorNotificationOptions = {
 	token: string
 	title?: string
 	description?: string
