@@ -6,7 +6,5 @@ updates:
       interval: "monthly"
     open-pull-requests-limit: 10
     groups:
-      test:
-        patterns:
-          - "@vitest/*"
-          - "vitest*"
+      dev:
+        dependency-type: development
