@@ -7,8 +7,6 @@
 		"dev": "wrangler dev src/index.ts --port 7070",
 		"deploy": "wrangler deploy --minify src/index.ts --keep-vars",
 		"create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
-		"lint": "biome check",
-		"lint:fix": "biome check --write",
 		"test": "vitest",
 		"test:ci": "pnpm run test:coverage",
 		"test:coverage": "vitest run --coverage",
