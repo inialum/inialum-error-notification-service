@@ -25,6 +25,8 @@ pnpm add @inialum/error-notification-service-javascript-sdk
     description: 'The error description', // optional
     serviceName: 'service-name',
     environment: 'production'
+    enabled: process.env.NODE_ENV === 'production', // Optional, default to true
+    ignoreErrors: ['ValidationError', 'NotFoundError'] // Optional
    })
   }
  }

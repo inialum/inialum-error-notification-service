@@ -22,7 +22,7 @@ app.use('*', notifyError({
  token: 'dummy',
  serviceName: 'service-name',
  environment: 'production'
- enabled: process.env.NODE_ENV === 'production', // Optional, default to true
+ enabled: true, // Optional
  ignoreErrors: ['ValidationError', 'NotFoundError'] // Optional
 }))
 
