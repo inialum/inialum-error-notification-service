@@ -30,9 +30,9 @@ type ErrorNotificationOptions = Omit<
  * app.use('*', notifyError({
  * 	token: 'dummy',
  * 	serviceName: 'service-name',
- * 	environment: 'production'
+ * 	environment: 'production',
  * 	enabled: isProd === true,
- * 	ignoreErrors: ['TypeError', 'ReferenceError'],
+ * 	ignoreErrors: ['TypeError', 'ReferenceError']
  * }))
  *
  * app.get('/', (c) => c.text('foo'))
