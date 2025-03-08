@@ -17,6 +17,8 @@ type ErrorNotificationOptions = Omit<
  * @param {string} options.token - The token used for authentication with the Hono middleware.
  * @param {string} options.serviceName - The name of the service that encountered the error.
  * @param {EnvironmentType} options.environment - The environment in which the error occurred.
+ * @param {boolean} [options.enabled] - Whether to enable or disable the notification. Default is true.
+ * @param {string[]} [options.ignoreErrors] - An array of error messages to ignore.
  *
  * @example
  * ```ts
@@ -29,6 +31,8 @@ type ErrorNotificationOptions = Omit<
  * 	token: 'dummy',
  * 	serviceName: 'service-name',
  * 	environment: 'production'
+ * 	enabled: isProd === true,
+ * 	ignoreErrors: ['TypeError', 'ReferenceError'],
  * }))
  *
  * app.get('/', (c) => c.text('foo'))
@@ -40,6 +44,8 @@ export const notifyError = ({
 	token,
 	serviceName,
 	environment,
+	enabled = true,
+	ignoreErrors = [],
 }: ErrorNotificationOptions) => {
 	return createMiddleware(async (c, next) => {
 		await next()
@@ -51,6 +57,8 @@ export const notifyError = ({
 				description: c.error.message,
 				serviceName,
 				environment,
+				enabled,
+				ignoreErrors,
 			})
 		}
 	})

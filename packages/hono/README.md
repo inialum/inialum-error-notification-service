@@ -22,6 +22,8 @@ app.use('*', notifyError({
  token: 'dummy',
  serviceName: 'service-name',
  environment: 'production'
+ enabled: process.env.NODE_ENV === 'production', // Optional, default to true
+ ignoreErrors: ['ValidationError', 'NotFoundError'] // Optional
 }))
 
 app.get('/', (c) => c.text('foo'))

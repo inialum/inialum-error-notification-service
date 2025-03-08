@@ -17,6 +17,7 @@ app.use('*', async (c, next) => {
 		token: ERROR_NOTIFICATION_TOKEN,
 		serviceName: 'example-service',
 		environment: ENVIRONMENT,
+		ignoreErrors: ['TypeError'],
 	})
 
 	return await handleError(c, next)
@@ -24,6 +25,10 @@ app.use('*', async (c, next) => {
 
 app.get('/', () => {
 	throw new Error('Error occurred!')
+})
+
+app.get('/ignore', () => {
+	throw new TypeError('Type error occurred!')
 })
 
 app.onError((error, c) => {
