@@ -21,7 +21,7 @@ const app = new Hono()
 app.use('*', notifyError({
  token: 'dummy',
  serviceName: 'service-name',
- environment: 'production'
+ environment: 'production',
  enabled: true, // Optional
  ignoreErrors: ['ValidationError', 'NotFoundError'] // Optional
 }))
