@@ -31,13 +31,13 @@ importers:
     dependencies:
       '@hono/swagger-ui':
         specifier: ^0.4.1
-        version: 0.4.1(hono@4.6.8)
+        version: 0.4.1(hono@4.7.4)
       '@hono/zod-openapi':
         specifier: ^0.16.4
-        version: 0.16.4(hono@4.6.8)(zod@3.23.8)
+        version: 0.16.4(hono@4.7.4)(zod@3.23.8)
       hono:
-        specifier: ^4.6.8
-        version: 4.6.8
+        specifier: ^4.7.4
+        version: 4.7.4
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -73,8 +73,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/hono
       hono:
-        specifier: ^4.6.8
-        version: 4.6.8
+        specifier: ^4.7.4
+        version: 4.7.4
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20250224.0
@@ -96,8 +96,8 @@ importers:
         specifier: ^3.0.7
         version: 3.0.7(vitest@3.0.7(@types/node@22.8.6)(msw@2.7.3(@types/node@22.8.6)(typescript@5.8.2))(yaml@2.6.0))
       hono:
-        specifier: ^4.6.8
-        version: 4.6.8
+        specifier: ^4.7.4
+        version: 4.7.4
       tsup:
         specifier: ^8.4.0
         version: 8.4.0(postcss@8.5.3)(typescript@5.8.2)(yaml@2.6.0)
@@ -1495,8 +1495,8 @@ packages:
   headers-polyfill@4.0.3:
     resolution: {integrity: sha512-IScLbePpkvO846sIwOtOTDjutRMWdXdJmXdMvk6gCBHxFO8d+QKOQedyZSxFTTFYRSmlgSTDtXqqq4pcenBXLQ==}
 
-  hono@4.6.8:
-    resolution: {integrity: sha512-f+2Ec9JAzabT61pglDiLJcF/DjiSefZkjCn9bzm1cYLGkD5ExJ3Jnv93ax9h0bn7UPLHF81KktoyjdQfWI2n1Q==}
+  hono@4.7.4:
+    resolution: {integrity: sha512-Pst8FuGqz3L7tFF+u9Pu70eI0xa5S3LPUmrNd5Jm8nTHze9FxLTK9Kaj5g/k4UcwuJSXTP65SyHOPLrffpcAJg==}
     engines: {node: '>=16.9.0'}
 
   html-escaper@2.0.2:
@@ -2933,20 +2933,20 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/swagger-ui@0.4.1(hono@4.6.8)':
+  '@hono/swagger-ui@0.4.1(hono@4.7.4)':
     dependencies:
-      hono: 4.6.8
+      hono: 4.7.4
 
-  '@hono/zod-openapi@0.16.4(hono@4.6.8)(zod@3.23.8)':
+  '@hono/zod-openapi@0.16.4(hono@4.7.4)(zod@3.23.8)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 7.2.0(zod@3.23.8)
-      '@hono/zod-validator': 0.3.0(hono@4.6.8)(zod@3.23.8)
-      hono: 4.6.8
+      '@hono/zod-validator': 0.3.0(hono@4.7.4)(zod@3.23.8)
+      hono: 4.7.4
       zod: 3.23.8
 
-  '@hono/zod-validator@0.3.0(hono@4.6.8)(zod@3.23.8)':
+  '@hono/zod-validator@0.3.0(hono@4.7.4)(zod@3.23.8)':
     dependencies:
-      hono: 4.6.8
+      hono: 4.7.4
       zod: 3.23.8
 
   '@iarna/toml@2.2.5': {}
@@ -3801,7 +3801,7 @@ snapshots:
 
   headers-polyfill@4.0.3: {}
 
-  hono@4.6.8: {}
+  hono@4.7.4: {}
 
   html-escaper@2.0.2: {}
 
