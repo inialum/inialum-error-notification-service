@@ -34,13 +34,13 @@ importers:
         version: 0.4.1(hono@4.6.8)
       '@hono/zod-openapi':
         specifier: ^0.16.4
-        version: 0.16.4(hono@4.6.8)(zod@3.23.8)
+        version: 0.16.4(hono@4.6.8)(zod@3.24.2)
       hono:
         specifier: ^4.6.8
         version: 4.6.8
       zod:
-        specifier: ^3.23.8
-        version: 3.23.8
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20250224.0
@@ -2482,8 +2482,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
 snapshots:
 
@@ -2492,10 +2492,10 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@asteasolutions/zod-to-openapi@7.2.0(zod@3.23.8)':
+  '@asteasolutions/zod-to-openapi@7.2.0(zod@3.24.2)':
     dependencies:
       openapi3-ts: 4.4.0
-      zod: 3.23.8
+      zod: 3.24.2
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -2937,17 +2937,17 @@ snapshots:
     dependencies:
       hono: 4.6.8
 
-  '@hono/zod-openapi@0.16.4(hono@4.6.8)(zod@3.23.8)':
+  '@hono/zod-openapi@0.16.4(hono@4.6.8)(zod@3.24.2)':
     dependencies:
-      '@asteasolutions/zod-to-openapi': 7.2.0(zod@3.23.8)
-      '@hono/zod-validator': 0.3.0(hono@4.6.8)(zod@3.23.8)
+      '@asteasolutions/zod-to-openapi': 7.2.0(zod@3.24.2)
+      '@hono/zod-validator': 0.3.0(hono@4.6.8)(zod@3.24.2)
       hono: 4.6.8
-      zod: 3.23.8
+      zod: 3.24.2
 
-  '@hono/zod-validator@0.3.0(hono@4.6.8)(zod@3.23.8)':
+  '@hono/zod-validator@0.3.0(hono@4.6.8)(zod@3.24.2)':
     dependencies:
       hono: 4.6.8
-      zod: 3.23.8
+      zod: 3.24.2
 
   '@iarna/toml@2.2.5': {}
 
@@ -4728,4 +4728,4 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@3.23.8: {}
+  zod@3.24.2: {}
