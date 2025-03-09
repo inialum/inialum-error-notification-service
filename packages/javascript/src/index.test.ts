@@ -167,4 +167,95 @@ describe('JavaScript SDK', () => {
 		})
 		expect(fetchSpy).not.toHaveBeenCalled()
 	})
+
+	// For the test that modifies payload with beforeSend, we need to update to use camelCase
+	test('should modify payload when beforeSend function is provided', async () => {
+		expect.assertions(1)
+		const errorObject = new CustomError('Custom error message')
+
+		const pendingRequest = waitForRequest(
+			'POST',
+			`${ERROR_NOTIFICATION_API_BASE_URL}/api/v1/notify`,
+		)
+
+		await notifyError(errorObject, {
+			token: 'dummy',
+			serviceName: 'inialum-service',
+			environment: 'production',
+			beforeSend: (_error, payload) => {
+				// Payload is now in camelCase
+				payload.title = `Modified: ${payload.title}`
+				payload.description = `Modified: ${payload.description}`
+				return payload
+			},
+		})
+
+		const request = await pendingRequest
+		// The API still expects snake_case
+		expect(await request.json()).toStrictEqual({
+			title: 'Modified: CustomError',
+			description: 'Modified: Custom error message',
+			service_name: 'inialum-service',
+			environment: 'production',
+		})
+	})
+
+	test('should not send notification when beforeSend returns null', async () => {
+		expect.assertions(1)
+		const errorObject = new CustomError('Custom error message')
+		const fetchSpy = vi.spyOn(global, 'fetch')
+
+		await notifyError(errorObject, {
+			token: 'dummy',
+			serviceName: 'inialum-service',
+			environment: 'production',
+			beforeSend: () => null,
+		})
+
+		expect(fetchSpy).not.toHaveBeenCalled()
+	})
+
+	test('should not send notification when beforeSend returns false', async () => {
+		expect.assertions(1)
+		const errorObject = new CustomError('Custom error message')
+		const fetchSpy = vi.spyOn(global, 'fetch')
+
+		await notifyError(errorObject, {
+			token: 'dummy',
+			serviceName: 'inialum-service',
+			environment: 'production',
+			beforeSend: () => false,
+		})
+
+		expect(fetchSpy).not.toHaveBeenCalled()
+	})
+
+	test('should send notification with original payload when beforeSend returns undefined', async () => {
+		expect.assertions(1)
+		const errorObject = new CustomError('Custom error message')
+
+		const pendingRequest = waitForRequest(
+			'POST',
+			`${ERROR_NOTIFICATION_API_BASE_URL}/api/v1/notify`,
+		)
+
+		await notifyError(errorObject, {
+			token: 'dummy',
+			serviceName: 'inialum-service',
+			environment: 'production',
+			beforeSend: () => {
+				// Returning undefined should use the original payload
+				return undefined
+			},
+		})
+
+		const request = await pendingRequest
+		// Verify the original payload is sent
+		expect(await request.json()).toStrictEqual({
+			title: 'CustomError',
+			description: 'Custom error message',
+			service_name: 'inialum-service',
+			environment: 'production',
+		})
+	})
 })
