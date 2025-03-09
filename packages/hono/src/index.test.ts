@@ -39,6 +39,8 @@ describe('Hono middleware', async () => {
 	})
 
 	test('should not call fetch function in the notifyError middleware when no error occurs', async () => {
+		expect.assertions(1)
+
 		await app.request('/test-ok', {
 			method: 'GET',
 			headers: {
@@ -50,6 +52,8 @@ describe('Hono middleware', async () => {
 	})
 
 	test('should call fetch function in the notifyError middleware when an error occurs', async () => {
+		expect.assertions(1)
+
 		// Disable error log in console
 		vi.spyOn(console, 'error').mockImplementation(() => null)
 

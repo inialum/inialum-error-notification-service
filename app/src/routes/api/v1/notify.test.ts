@@ -33,6 +33,8 @@ describe('API v1', () => {
 	} satisfies NotifyApiRequestV1
 
 	test('POST /notify (should return data with no errors)', async () => {
+		expect.assertions(2)
+
 		const res = await apiV1.request('/notify', {
 			method: 'POST',
 			headers: {
@@ -48,6 +50,8 @@ describe('API v1', () => {
 	})
 
 	test('POST /notify (should return with error message)', async () => {
+		expect.assertions(2)
+
 		const res = await apiV1.request('/notify', {
 			method: 'POST',
 			headers: {
