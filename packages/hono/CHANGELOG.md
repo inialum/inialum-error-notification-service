@@ -1,5 +1,18 @@
 # @inialum/error-notification-service-hono-middleware
 
+## 0.4.0
+
+### Minor Changes
+
+- [#124](https://github.com/inialum/inialum-error-notification-service/pull/124) [`a857a7f`](https://github.com/inialum/inialum-error-notification-service/commit/a857a7f9347ac7e1820fc02aa811dd8d28f35b6e) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Make it possible to configure `beforeSend` to modify payload before sending notifications
+
+- [#124](https://github.com/inialum/inialum-error-notification-service/pull/124) [`c67b74e`](https://github.com/inialum/inialum-error-notification-service/commit/c67b74e91bc53bdf07c7e095ada0510183463023) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Make it possible to set `ignoreErrors` and `enabled` options
+
+### Patch Changes
+
+- Updated dependencies [[`a857a7f`](https://github.com/inialum/inialum-error-notification-service/commit/a857a7f9347ac7e1820fc02aa811dd8d28f35b6e), [`c67b74e`](https://github.com/inialum/inialum-error-notification-service/commit/c67b74e91bc53bdf07c7e095ada0510183463023)]:
+  - @inialum/error-notification-service-javascript-sdk@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes
