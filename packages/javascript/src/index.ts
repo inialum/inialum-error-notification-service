@@ -107,7 +107,9 @@ export const notifyError = async (
 
 		if (error) {
 			console.error(error)
-			throw new Error('Failed to notify error')
+			throw new Error('Failed to notify error', {
+				cause: error,
+			})
 		}
 	} catch (error) {
 		console.error(error)
@@ -115,7 +117,9 @@ export const notifyError = async (
 		if (error instanceof Error) {
 			throw error
 		}
-		throw new Error('Failed to notify error')
+		throw new Error('Failed to notify error', {
+			cause: error,
+		})
 	}
 }
 
