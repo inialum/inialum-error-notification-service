@@ -18,7 +18,7 @@ type ErrorNotificationOptions = Omit<
  * @param {string} options.serviceName - The name of the service that encountered the error.
  * @param {EnvironmentType} options.environment - The environment in which the error occurred.
  * @param {boolean} [options.enabled] - Whether to enable or disable the notification. Default is true.
- * @param {string[]} [options.ignoreErrors] - An array of error messages to ignore.
+ * @param {string[]} [options.ignoreErrors] - An array of error names to ignore.
  *
  * @example
  * ```ts
