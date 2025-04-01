@@ -35,11 +35,11 @@
 		"openapi-fetch": "^0.13.0"
 	},
 	"devDependencies": {
-		"@vitest/coverage-v8": "^3.0.7",
+		"@vitest/coverage-v8": "^3.1.1",
 		"msw": "^2.7.3",
 		"openapi-typescript": "^7.6.1",
 		"tsup": "^8.4.0",
 		"typescript": "^5.8.2",
-		"vitest": "^3.0.7"
+		"vitest": "^3.1.1"
 	}
 }
