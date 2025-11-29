@@ -23,7 +23,10 @@
 	},
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
+	"files": [
+		"./dist/**/*.js",
+		"./dist/**/*.d.ts"
+	],
 	"scripts": {
 		"build": "tsup",
 		"api:gen-schema": "openapi-typescript https://error-notification-api.inialum.org/schema/v1 -o ./src/types/generated/schema.d.ts",
@@ -33,14 +36,14 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"openapi-fetch": "^0.13.0"
+		"openapi-fetch": "^0.15.0"
 	},
 	"devDependencies": {
-		"@vitest/coverage-v8": "^3.0.7",
-		"msw": "^2.7.3",
-		"openapi-typescript": "^7.6.1",
-		"tsup": "^8.4.0",
-		"typescript": "^5.8.2",
-		"vitest": "^3.0.7"
+		"@vitest/coverage-v8": "^4.0.14",
+		"msw": "^2.12.3",
+		"openapi-typescript": "^7.10.1",
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.14"
 	}
 }
