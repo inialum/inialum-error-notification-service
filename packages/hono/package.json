@@ -11,7 +11,8 @@
 	"license": "Apache-2.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/inialum/inialum-error-notification-service"
+		"url": "https://github.com/inialum/inialum-error-notification-service",
+		"directory": "packages/hono"
 	},
 	"publishConfig": {
 		"access": "public",
