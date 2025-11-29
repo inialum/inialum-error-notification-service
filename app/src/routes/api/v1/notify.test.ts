@@ -5,7 +5,9 @@ import type { NotifyApiRequestV1 } from '@/libs/api/v1/schema/notify'
 
 vi.mock('hono/adapter', () => {
 	return {
-		env: () => getMiniflareBindings(),
+		env: vi.fn().mockReturnValue({
+			DISCORD_WEBHOOK_URL: 'test-token',
+		}),
 	}
 })
 

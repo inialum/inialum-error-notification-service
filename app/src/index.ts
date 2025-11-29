@@ -7,20 +7,21 @@ import { secureHeaders } from 'hono/secure-headers'
 
 import { API_ENDPOINT, ORIGINS } from '@/constants/config'
 import { api } from '@/routes/api'
+import type { Bindings } from '@/types'
 import { DisableTryItOutPlugin } from '@/utils/swaggerPlugins'
 
-const app = new OpenAPIHono()
+const app = new OpenAPIHono<{ Bindings: Bindings }>()
 
 app.use('*', secureHeaders())
 app.use('*', async (c, next) => {
-	const { ENVIRONMENT } = env<{ ENVIRONMENT: string }>(c)
+	const { ENVIRONMENT } = env(c)
 	const originCheck = cors({
 		origin: ENVIRONMENT === 'production' ? ORIGINS : '*',
 	})
 	return await originCheck(c, next)
 })
 app.use('/api/*', async (c, next) => {
-	const { TOKEN_SECRET } = env<{ TOKEN_SECRET: string }>(c)
+	const { TOKEN_SECRET } = env(c)
 	const auth = jwt({
 		secret: TOKEN_SECRET,
 	})
