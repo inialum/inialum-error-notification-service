@@ -71,7 +71,7 @@ describe('API v1', () => {
 			issues: [
 				{
 					code: 'invalid_union',
-					message: 'Invalid input',
+					message: 'Invalid environment',
 					path: ['environment'],
 					errors: [
 						[
