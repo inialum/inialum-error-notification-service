@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import type { MockInstance } from 'vitest'
+
 import { notifyError } from './index'
 
 describe('Hono middleware', async () => {

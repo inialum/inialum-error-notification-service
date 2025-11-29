@@ -6,9 +6,7 @@ import { jwt } from 'hono/jwt'
 import { secureHeaders } from 'hono/secure-headers'
 
 import { API_ENDPOINT, ORIGINS } from '@/constants/config'
-
 import { api } from '@/routes/api'
-
 import { DisableTryItOutPlugin } from '@/utils/swaggerPlugins'
 
 const app = new OpenAPIHono()

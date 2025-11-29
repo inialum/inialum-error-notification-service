@@ -1,4 +1,4 @@
-import { OpenAPIHono, createRoute } from '@hono/zod-openapi'
+import { createRoute, OpenAPIHono } from '@hono/zod-openapi'
 import { env } from 'hono/adapter'
 
 import { buildDiscordMessageBody } from '@/libs/api/v1/providers/discord'

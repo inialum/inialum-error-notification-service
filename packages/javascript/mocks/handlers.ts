@@ -1,4 +1,5 @@
-import { http, HttpResponse } from 'msw'
+import { HttpResponse, http } from 'msw'
+
 import { ERROR_NOTIFICATION_API_BASE_URL } from '../src/constants'
 
 export const handlers = [
