@@ -7,25 +7,24 @@
 		"dev": "wrangler dev src/index.ts --port 7070",
 		"deploy": "wrangler deploy --minify src/index.ts --keep-vars",
 		"create-token": "inialum-token-generator --service-name inialum-error-notification-service --env-file ./.dev.vars",
+		"typegen": "wrangler types --env-interface CloudflareBindings",
 		"test": "vitest",
 		"test:ci": "pnpm run test:coverage",
 		"test:coverage": "vitest run --coverage",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@hono/swagger-ui": "^0.4.1",
-		"@hono/zod-openapi": "^0.16.4",
-		"hono": "^4.6.8",
-		"zod": "^3.23.8"
+		"@hono/swagger-ui": "^0.5.2",
+		"@hono/zod-openapi": "^1.1.5",
+		"hono": "^4.10.7",
+		"zod": "^4.1.13"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250224.0",
 		"@inialum/token-generator": "^0.3.0",
-		"@vitest/coverage-v8": "^3.0.7",
-		"discord-api-types": "^0.37.119",
-		"typescript": "^5.8.2",
-		"vitest": "^3.0.7",
-		"vitest-environment-miniflare": "^2.14.4",
-		"wrangler": "^3.111.0"
+		"@vitest/coverage-v8": "^4.0.14",
+		"discord-api-types": "^0.38.34",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.14",
+		"wrangler": "^4.51.0"
 	}
 }

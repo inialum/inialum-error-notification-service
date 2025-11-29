@@ -1,10 +1,9 @@
-import { createMiddleware } from 'hono/factory'
-
 import {
 	type EnvironmentType,
 	type ErrorNotificationPayload,
 	notifyError as notifyErrorJsSdk,
 } from '@inialum/error-notification-service-javascript-sdk'
+import { createMiddleware } from 'hono/factory'
 
 /**
  * Configuration options for the Hono error notification middleware.

@@ -7,11 +7,11 @@
 	},
 	"dependencies": {
 		"@inialum/error-notification-service-hono-middleware": "workspace:^",
-		"hono": "^4.6.8"
+		"hono": "^4.10.7"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250224.0",
-		"typescript": "^5.8.2",
-		"wrangler": "^3.111.0"
+		"@cloudflare/workers-types": "^4.20251128.0",
+		"typescript": "^5.9.3",
+		"wrangler": "^4.51.0"
 	}
 }

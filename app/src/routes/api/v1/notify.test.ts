@@ -1,12 +1,13 @@
 import type { ZodError } from 'zod'
 
-import type { NotifyApiRequestV1 } from '@/libs/api/v1/schema/notify'
-
 import { apiV1 } from '.'
+import type { NotifyApiRequestV1 } from '@/libs/api/v1/schema/notify'
 
 vi.mock('hono/adapter', () => {
 	return {
-		env: () => getMiniflareBindings(),
+		env: vi.fn().mockReturnValue({
+			DISCORD_WEBHOOK_URL: 'test-token',
+		}),
 	}
 })
 
@@ -72,46 +73,34 @@ describe('API v1', () => {
 					code: 'invalid_union',
 					message: 'Invalid environment',
 					path: ['environment'],
-					unionErrors: [
-						{
-							name: 'ZodError',
-							issues: [
-								{
-									code: 'invalid_literal',
-									expected: 'local',
-									message: 'Invalid literal value, expected "local"',
-									path: ['environment'],
-									received: 'fake-environment',
-								},
-							],
-						},
-						{
-							issues: [
-								{
-									code: 'invalid_literal',
-									expected: 'staging',
-									message: 'Invalid literal value, expected "staging"',
-									path: ['environment'],
-									received: 'fake-environment',
-								},
-							],
-							name: 'ZodError',
-						},
-						{
-							issues: [
-								{
-									code: 'invalid_literal',
-									expected: 'production',
-									message: 'Invalid literal value, expected "production"',
-									path: ['environment'],
-									received: 'fake-environment',
-								},
-							],
-							name: 'ZodError',
-						},
+					errors: [
+						[
+							{
+								code: 'invalid_value',
+								message: 'Invalid input: expected "local"',
+								path: [],
+								values: ['local'],
+							},
+						],
+						[
+							{
+								code: 'invalid_value',
+								message: 'Invalid input: expected "staging"',
+								path: [],
+								values: ['staging'],
+							},
+						],
+						[
+							{
+								code: 'invalid_value',
+								message: 'Invalid input: expected "production"',
+								path: [],
+								values: ['production'],
+							},
+						],
 					],
 				},
-			] as ZodError['issues'],
+			] satisfies ZodError['issues'],
 		})
 	})
 })

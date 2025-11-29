@@ -1,4 +1,4 @@
-import { OpenAPIHono, createRoute } from '@hono/zod-openapi'
+import { createRoute, OpenAPIHono } from '@hono/zod-openapi'
 import { env } from 'hono/adapter'
 
 import { buildDiscordMessageBody } from '@/libs/api/v1/providers/discord'
@@ -8,8 +8,9 @@ import {
 	NotifyApiRequestSchemaV1,
 	NotifyApiResponseSchemaV1,
 } from '@/libs/api/v1/schema/notify'
+import type { Bindings } from '@/types'
 
-const notifyApiV1 = new OpenAPIHono()
+const notifyApiV1 = new OpenAPIHono<{ Bindings: Bindings }>()
 
 const route = createRoute({
 	method: 'post',
@@ -57,7 +58,7 @@ const route = createRoute({
 notifyApiV1.openapi(
 	route,
 	async (c) => {
-		const { DISCORD_WEBHOOK_URL } = env<{ DISCORD_WEBHOOK_URL: string }>(c)
+		const { DISCORD_WEBHOOK_URL } = env(c)
 
 		const data = c.req.valid('json')
 
