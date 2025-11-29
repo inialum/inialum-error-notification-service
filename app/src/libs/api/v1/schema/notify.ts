@@ -7,7 +7,10 @@ export const NotifyApiRequestSchemaV1 = z
 	.object({
 		title: z
 			.string({
-				required_error: 'This field is required',
+				error: (issue) =>
+					issue.input === undefined
+						? 'This field is required'
+						: 'Must be a string',
 			})
 			.max(128, {
 				message: 'Message is too long. Max length is 128 characters',
@@ -26,7 +29,10 @@ export const NotifyApiRequestSchemaV1 = z
 			}),
 		service_name: z
 			.string({
-				required_error: 'This field is required',
+				error: (issue) =>
+					issue.input === undefined
+						? 'This field is required'
+						: 'Must be a string',
 			})
 			.openapi({
 				example: 'inialum-mail-service',
@@ -35,7 +41,7 @@ export const NotifyApiRequestSchemaV1 = z
 			.union(
 				[z.literal('local'), z.literal('staging'), z.literal('production')],
 				{
-					errorMap: () => ({ message: 'Invalid environment' }),
+					error: () => 'Invalid environment',
 				},
 			)
 			.openapi({
