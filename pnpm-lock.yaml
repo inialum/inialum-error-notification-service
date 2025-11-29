@@ -108,6 +108,9 @@ importers:
         specifier: ^0.15.0
         version: 0.15.0
     devDependencies:
+      '@tsconfig/vite-react':
+        specifier: ^7.0.2
+        version: 7.0.2
       '@vitest/coverage-v8':
         specifier: ^4.0.14
         version: 4.0.14(vitest@4.0.14(@types/node@24.10.1)(msw@2.12.3(@types/node@24.10.1)(typescript@5.9.3))(yaml@2.8.1))
@@ -1182,6 +1185,9 @@ packages:
 
   '@tsconfig/node24@24.0.3':
     resolution: {integrity: sha512-vcERKtKQKHgzt/vfS3Gjasd8SUI2a0WZXpgJURdJsMySpS5+ctgbPfuLj2z/W+w4lAfTWxoN4upKfu2WzIRYnw==}
+
+  '@tsconfig/vite-react@7.0.2':
+    resolution: {integrity: sha512-lEj4y5SPRcH+bjw0tyuxrEnPqQUwfQzBKgd1YamD9xyet9zLwh2gwy5F8w/Nxg5DjdgYVjjKo5aLJUf0BTDz4w==}
 
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
@@ -3191,6 +3197,8 @@ snapshots:
   '@tsconfig/node-ts@23.6.2': {}
 
   '@tsconfig/node24@24.0.3': {}
+
+  '@tsconfig/vite-react@7.0.2': {}
 
   '@types/chai@5.2.3':
     dependencies:
