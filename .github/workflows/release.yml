@@ -82,4 +82,3 @@ jobs:
           publish: pnpm publish:ci
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
