@@ -20,7 +20,6 @@
 		"zod": "^4.1.13"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20251128.0",
 		"@inialum/token-generator": "^0.3.0",
 		"@vitest/coverage-v8": "^4.0.14",
 		"discord-api-types": "^0.38.34",
