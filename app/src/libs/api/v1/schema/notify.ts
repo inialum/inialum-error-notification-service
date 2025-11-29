@@ -41,7 +41,7 @@ export const NotifyApiRequestSchemaV1 = z
 			.union(
 				[z.literal('local'), z.literal('staging'), z.literal('production')],
 				{
-					error: () => 'Invalid environment',
+					error: 'Invalid environment',
 				},
 			)
 			.openapi({
