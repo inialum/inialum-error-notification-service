@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@inialum/token-generator": "^0.3.0",
 		"@vitest/coverage-v8": "^4.0.14",
-		"discord-api-types": "^0.38.34",
+		"discord-api-types": "^0.38.35",
 		"typescript": "^5.9.3",
 		"vitest": "^4.0.14",
 		"wrangler": "^4.51.0"
