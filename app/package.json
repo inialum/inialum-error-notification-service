@@ -21,10 +21,10 @@
 	},
 	"devDependencies": {
 		"@inialum/token-generator": "^0.3.0",
-		"@vitest/coverage-v8": "^4.0.14",
-		"discord-api-types": "^0.38.34",
+		"@vitest/coverage-v8": "^4.0.18",
+		"discord-api-types": "^0.38.38",
 		"typescript": "^5.9.3",
-		"vitest": "^4.0.14",
-		"wrangler": "^4.51.0"
+		"vitest": "^4.0.18",
+		"wrangler": "^4.61.1"
 	}
 }
