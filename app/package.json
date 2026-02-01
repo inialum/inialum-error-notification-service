@@ -17,7 +17,7 @@
 		"@hono/swagger-ui": "^0.5.2",
 		"@hono/zod-openapi": "^1.1.5",
 		"hono": "^4.10.7",
-		"zod": "^4.1.13"
+		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@inialum/token-generator": "^0.3.0",
