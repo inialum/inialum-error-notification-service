@@ -258,4 +258,62 @@ describe('JavaScript SDK', () => {
 			environment: 'production',
 		})
 	})
+
+	test('should abort request when timeout is exceeded', async () => {
+		expect.assertions(1)
+		const errorObject = new CustomError('Custom error message')
+
+		vi.spyOn(global, 'fetch').mockImplementation((input) => {
+			const signal = input instanceof Request ? input.signal : undefined
+			return new Promise((_resolve, reject) => {
+				if (!signal) {
+					return
+				}
+				if (signal.aborted) {
+					reject(signal.reason)
+					return
+				}
+				signal.addEventListener('abort', () => {
+					reject(signal.reason)
+				})
+			})
+		})
+		vi.spyOn(console, 'error').mockImplementation(() => null)
+
+		await expect(
+			notifyError(errorObject, {
+				token: 'dummy',
+				serviceName: 'inialum-service',
+				environment: 'production',
+				timeout: 10,
+			}),
+		).rejects.toThrow()
+	})
+
+	test('should send request with AbortSignal when timeout is set', async () => {
+		expect.assertions(2)
+		const errorObject = new CustomError('Custom error message')
+		const fetchSpy = vi.spyOn(global, 'fetch').mockResolvedValue(
+			new Response(
+				JSON.stringify({
+					status: 'ok',
+				}),
+				{
+					status: 200,
+					headers: { 'Content-Type': 'application/json' },
+				},
+			),
+		)
+
+		await notifyError(errorObject, {
+			token: 'dummy',
+			serviceName: 'inialum-service',
+			environment: 'production',
+			timeout: 5000,
+		})
+
+		expect(fetchSpy.mock.calls[0]?.[0]).toBeInstanceOf(Request)
+		const request = fetchSpy.mock.calls[0]?.[0] as Request
+		expect(request.signal).toBeInstanceOf(AbortSignal)
+	})
 })

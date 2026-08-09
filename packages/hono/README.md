@@ -26,6 +26,7 @@ app.use(
     environment: 'production',
     enabled: true, // Optional
     ignoreErrors: ['ValidationError', 'NotFoundError'], // Optional
+    timeout: 5000, // Optional
     beforeSend: (error, payload) => {
       // Modify the error payload or cancel sending
       if (error.message.includes('sensitive')) {
@@ -57,6 +58,20 @@ You can refer to the [example project](/examples/hono-middleware) for more detai
 | `enabled`      | boolean  | No       | Whether error notifications are enabled (default: true)                       |
 | `ignoreErrors` | string[] | No       | List of error names to ignore                                                 |
 | `beforeSend`   | function | No       | Function to modify error data before sending or cancel sending                |
+| `timeout`      | number   | No       | Request timeout in milliseconds                                               |
+
+### timeout
+
+Set a request timeout in milliseconds to abort the notification request if it takes too long:
+
+```ts
+notifyError({
+  token: 'dummy',
+  serviceName: 'service-name',
+  environment: 'production',
+  timeout: 5000, // Abort after 5 seconds
+})
+```
 
 ### beforeSend Function
 

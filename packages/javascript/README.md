@@ -28,6 +28,7 @@ try {
       description: 'Custom error description',
       enabled: process.env.NODE_ENV === 'production',
       ignoreErrors: ['TypeError', 'ReferenceError'],
+      timeout: 5000,
       beforeSend: (error, payload) => {
         // Modify payload before sending
         payload.title = `[App] ${payload.title}`
@@ -50,8 +51,22 @@ try {
 | `enabled`      | boolean  | No       | Whether error notifications are enabled (default: true)                       |
 | `ignoreErrors` | string[] | No       | List of error names to ignore                                                 |
 | `beforeSend`   | function | No       | Function to modify error data before sending or cancel sending                |
+| `timeout`      | number   | No       | Request timeout in milliseconds                                               |
 
 ## Advanced Features
+
+### timeout
+
+Set a request timeout in milliseconds to abort the notification request if it takes too long:
+
+```ts
+await notifyError(error, {
+  token: 'your-token',
+  serviceName: 'your-service-name',
+  environment: 'production',
+  timeout: 5000, // Abort after 5 seconds
+})
+```
 
 ### beforeSend Function
 
