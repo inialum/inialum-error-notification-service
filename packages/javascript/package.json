@@ -24,9 +24,7 @@
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"files": [
-		"./dist/**/*.js",
-		"./dist/**/*.js.map",
-		"./dist/**/*.d.ts"
+		"dist"
 	],
 	"scripts": {
 		"build": "tsup",
