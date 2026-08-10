@@ -1,6 +1,6 @@
 {
 	"name": "@inialum/error-notification-service-javascript-sdk",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"description": "JavaScript SDK for inialum-error-notification-service",
 	"type": "module",
 	"author": {

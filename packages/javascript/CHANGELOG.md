@@ -1,5 +1,15 @@
 # @inialum/error-notification-service-javascript-sdk
 
+## 0.5.0
+
+### Minor Changes
+
+- [#163](https://github.com/inialum/inialum-error-notification-service/pull/163) [`25be2d6`](https://github.com/inialum/inialum-error-notification-service/commit/25be2d6f53c33f2005410fd74207e8e965538363) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Make it possible to configure `timeout` for notification requests
+
+### Patch Changes
+
+- [#165](https://github.com/inialum/inialum-error-notification-service/pull/165) [`5ba2dc8`](https://github.com/inialum/inialum-error-notification-service/commit/5ba2dc8e5c263fe9ccf340ae01d24fbbda71c067) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Include generated `dist/*.js.map` files in the published npm package so Vite/Vitest no longer fail with ENOENT when resolving `sourceMappingURL`
+
 ## 0.4.1
 
 ### Patch Changes
