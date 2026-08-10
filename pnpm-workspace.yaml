@@ -2,3 +2,9 @@ packages:
   - "app"
   - "examples/*"
   - "packages/*"
+
+allowBuilds:
+  esbuild: false
+  msw: false
+  sharp: false
+  workerd: false
