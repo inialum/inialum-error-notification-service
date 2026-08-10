@@ -51,4 +51,10 @@ export type ErrorNotificationOptions = {
 		error: Error,
 		payload: ErrorNotificationPayload,
 	) => ErrorNotificationPayload | null | false | undefined
+
+	/**
+	 * Request timeout in milliseconds.
+	 * When set, the notification request is aborted if it exceeds this duration.
+	 */
+	timeout?: number
 }

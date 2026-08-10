@@ -20,6 +20,7 @@ import { convertToApiPayload } from './utils/caseConversion'
  * @param {boolean} [options.enabled] - Whether to enable or disable the notification. Default is true.
  * @param {string[]} [options.ignoreErrors] - An array of error names to ignore.
  * @param {(error: Error, payload: ErrorNotificationPayload) => ErrorNotificationPayload | null | false | undefined} [options.beforeSend] - A function that allows you to modify the data being sent or prevent the notification from being sent by returning null/false.
+ * @param {number} [options.timeout] - Request timeout in milliseconds. When set, the request is aborted if it exceeds this duration.
  *
  * @example
  * ```ts
@@ -37,6 +38,7 @@ import { convertToApiPayload } from './utils/caseConversion'
  * 			environment: 'production',
  * 			enabled: isProd === true, // optional
  * 			ignoreErrors: ['TypeError', 'ReferenceError'], // optional
+ * 			timeout: 5000, // optional
  * 			beforeSend: (error, payload) => {
  * 				// Modify payload
  * 				payload.title = `[Modified] ${payload.title}`;
@@ -58,6 +60,7 @@ export const notifyError = async (
 		enabled = true,
 		ignoreErrors = [],
 		beforeSend,
+		timeout,
 	}: ErrorNotificationOptions,
 ): Promise<void> => {
 	if (!enabled) {
@@ -103,6 +106,7 @@ export const notifyError = async (
 				Authorization: `Bearer ${token}`,
 				'Content-Type': 'application/json',
 			},
+			signal: timeout !== undefined ? AbortSignal.timeout(timeout) : undefined,
 		})
 
 		if (error) {

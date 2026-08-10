@@ -27,6 +27,7 @@ type ErrorNotificationOptions = Omit<
  * @param {boolean} [options.enabled] - Whether to enable or disable the notification. Default is true.
  * @param {string[]} [options.ignoreErrors] - An array of error names to ignore.
  * @param {(error: Error, payload: ErrorNotificationPayload) => ErrorNotificationPayload | null | false | undefined} [options.beforeSend] - A function that allows you to modify the data being sent or prevent the notification from being sent.
+ * @param {number} [options.timeout] - Request timeout in milliseconds. When set, the request is aborted if it exceeds this duration.
  *
  * @example
  * ```ts
@@ -41,6 +42,7 @@ type ErrorNotificationOptions = Omit<
  * 	environment: 'production',
  * 	enabled: isProd === true,
  * 	ignoreErrors: ['TypeError', 'ReferenceError'],
+ * 	timeout: 5000,
  * 	beforeSend: (error, payload) => {
  * 		// Add user info to the description
  * 		payload.description = `User: user123 - ${payload.description}`;
@@ -60,6 +62,7 @@ export const notifyError = ({
 	enabled = true,
 	ignoreErrors = [],
 	beforeSend,
+	timeout,
 }: ErrorNotificationOptions) => {
 	return createMiddleware(async (c, next) => {
 		await next()
@@ -74,6 +77,7 @@ export const notifyError = ({
 				enabled,
 				ignoreErrors,
 				beforeSend,
+				timeout,
 			})
 		}
 	})
