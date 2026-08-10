@@ -13,7 +13,6 @@
 		"changeset": "changeset",
 		"version:ci": "changeset version && biome format --write",
 		"publish:ci": "pnpm publish -r && changeset tag",
-		"clean": "turbo clean",
 		"app": "pnpm --filter \"./app\"",
 		"package-js": "pnpm --filter \"./packages/javascript\"",
 		"package-hono": "pnpm --filter \"./packages/hono\""
