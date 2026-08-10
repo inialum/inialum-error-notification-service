@@ -11,7 +11,7 @@ This is a pnpm + Turborepo monorepo (`pnpm-workspace.yaml`) with three publishab
 
 ### Toolchain
 - Node is pinned by `.node-version` / `devEngines.runtime` (24.11.1) and pnpm by `packageManager` / `devEngines.packageManager` in `package.json` (11.21.0). A login shell resolves these via `nvm` (24.11.1 is the nvm default); non-login shells may fall back to a system Node 22, so prefer a login shell / `nvm use` if you hit version issues.
-- Dependency build scripts are controlled by `allowBuilds` in `pnpm-workspace.yaml` (`esbuild` / `msw` / `sharp` / `workerd` are explicitly `false`). Do not run the interactive `pnpm approve-builds`.
+- Dependency build scripts are controlled by `allowBuilds` in `pnpm-workspace.yaml` (`esbuild` / `msw` / `sharp` / `workerd` are explicitly `true`). Do not run the interactive `pnpm approve-builds`.
 - pnpm settings live in `pnpm-workspace.yaml` (not `.npmrc`). `.npmrc` is only for auth/registry settings.
 
 ### Standard commands (from repo root; see root `package.json` scripts)

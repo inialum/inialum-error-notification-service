@@ -4,7 +4,7 @@ packages:
   - "packages/*"
 
 allowBuilds:
-  esbuild: false
-  msw: false
-  sharp: false
-  workerd: false
+  esbuild: true
+  msw: true
+  sharp: true
+  workerd: true
