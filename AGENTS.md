@@ -10,8 +10,9 @@ This is a pnpm + Turborepo monorepo (`pnpm-workspace.yaml`) with three publishab
 - `examples/hono-middleware` — a Workers example that consumes the Hono middleware.
 
 ### Toolchain
-- Node is pinned by `.node-version` (24.11.1) and pnpm by `packageManager` in `package.json` (10.24.0). A login shell resolves these via `nvm` (24.11.1 is the nvm default); non-login shells may fall back to a system Node 22, so prefer a login shell / `nvm use` if you hit version issues. pnpm 10.24.0 is available for both.
-- `pnpm install` prints "Ignored build scripts: esbuild, msw, sharp, workerd". This is expected and harmless — lint, typecheck, tests, build, and `wrangler dev` all work without approving those build scripts. Do not run the interactive `pnpm approve-builds`.
+- Node is pinned by `.node-version` / `devEngines.runtime` (24.11.1) and pnpm by `packageManager` / `devEngines.packageManager` in `package.json` (11.21.0). A login shell resolves these via `nvm` (24.11.1 is the nvm default); non-login shells may fall back to a system Node 22, so prefer a login shell / `nvm use` if you hit version issues.
+- Dependency build scripts are controlled by `allowBuilds` in `pnpm-workspace.yaml` (`esbuild` / `msw` / `sharp` / `workerd` are explicitly `false`). Do not run the interactive `pnpm approve-builds`.
+- pnpm settings live in `pnpm-workspace.yaml` (not `.npmrc`). `.npmrc` is only for auth/registry settings.
 
 ### Standard commands (from repo root; see root `package.json` scripts)
 - Lint: `pnpm lint` (Biome). Auto-fix: `pnpm fix`.
