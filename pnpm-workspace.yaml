@@ -3,8 +3,6 @@ packages:
   - "examples/*"
   - "packages/*"
 
-autoInstallPeers: true
-
 allowBuilds:
   esbuild: false
   msw: false
